@@ -2,8 +2,7 @@ set nocompatible
 set runtimepath+=~/.vim/plugins/dein.vim/
 "{{{
 call dein#begin(expand('~/.cache/dein'))
-" call dein#add('scrooloose/syntastic')
-" call dein#add('tpope/vim-obsession')
+call dein#add('scrooloose/syntastic')
 call dein#add('unblevable/quick-scope')
 call dein#add('tpope/vim-fugitive')
 call dein#add('tpope/vim-repeat')
@@ -17,57 +16,31 @@ call dein#add('vim-scripts/a.vim')
 call dein#add('christoomey/vim-tmux-navigator')
 call dein#add('altercation/vim-colors-solarized')
 call dein#end()
+source ~/.vim/settings/plugins/airline.vim
 let NERDTreeDirArrows = 0
 let NERDChristmasTree = 0
 let g:tmux_navigator_no_mappings = 1
-" let g:airline_theme = 'solarized'
-let g:airline_theme = 'kolor'
-let g:airline_powerline_fonts = 0
-let g:airline#extensions#tabline#enabled = 1
-let g:airline#extensions#whitespace#mixed_indent_algo = 1
-" let g:airline_section_z = airline#section#create(['%{ObsessionStatus(''>'', ''•'')} ', 'windowswap', '%3p%% ', 'linenr', ':%3v '])
-let g:airline_section_z = airline#section#create(['%3p%% ', 'linenr', ':%3v '])
-let g:airline_left_sep = ''
-let g:airline_left_sep = ''
-let g:airline_right_sep = ''
-let g:airline_right_sep = ''
-let g:airline_symbols.crypt = '🔒'
-let g:airline_symbols.linenr = 'LN'
-" let g:airline_symbols.paste = 'ρ'
-" let g:airline_symbols.paste = 'Þ'
-let g:airline_symbols.paste = 'PASTE'
-let g:airline_symbols.branch = 'Y'
-let g:airline_symbols.whitespace = '·'
-
-" NeoBundle 'majutsushi/tagbar'
-" NeoBundle 'myusuf3/numbers.vim'
+" call dein#add('tpope/vim-obsession')
+" call dein#add('majutsushi/tagbar')
+" call dein#add('myusuf3/numbers.vim')
 " nmap <leader>tnu :NumbersToggle<CR>
-" let g:airline#extensions#tmuxline#enabled = 0"}}}
-
-" previous stuff we no longer use {{{
-" NeoBundle 'kien/ctrlp.vim'
+" call dein#add('kien/ctrlp.vim')
 " nmap <C-o> :CtrlP /home/cunha<cr>
-" NeoBundle 'xolox/vim-misc'
-" NeoBundle 'xolox/vim-session'
-" let g:session_autosave = 'yes'
-" let g:session_autoload = 'no'
 " }}}
-"
+
 " scripts to check out {{{
 " klen/python-mode
 " gundo
 " snipmate
 " yankring
 " NERDCommenter
-" kien/ctrlp
-" check out formatoptions
 " jedi-vim
 " }}}
 
 filetype on
 filetype plugin on
 filetype indent on
-" let mapleader = ";"
+let mapleader = "\\"
 let maplocalleader = ","
 
 " file management {{{
@@ -150,105 +123,6 @@ set foldenable
 " set foldcolumn=1
 " }}}
 
-" set background=light
-" let g:solarized_termcolors = 16
-" let g:solarized_termtrans = 0
-" let g:solarized_degrade = 0
-" let g:solarized_bold = 1
-" let g:solarized_underline = 1
-" let g:solarized_italic = 1
-" let g:solarized_contrast = "normal"
-" let g:solarized_visibility = "normal"
-" let g:solarized_hitrail = 0
-" let g:solarized_menu = 0
-" colorscheme solarized
-colorscheme psycho
-syntax on
-
-autocmd BufNewFile,BufRead *plot set filetype=gnuplot
-autocmd BufNewFile,BufRead *cunha_wp_wordpress* set filetype=markdown
-autocmd BufNewFile,BufRead mail.google.com* set filetype=mail
-
-" C {{{
-autocmd FileType c set cindent
-autocmd FileType c imap <localleader>logea logea(__FILE__, __LINE__, NULL);
-autocmd FileType cpp set cindent
-" }}}
-
-" LaTeX {{{
-let g:tex_flavor = "latex"
-let g:tex_indent_items = 0
-let g:tex_indent_brace = 0
-autocmd FileType tex set noautoindent nosmartindent spell
-autocmd FileType tex nmap <localleader>em viWB<ESC>i\emph{<ESC>Ea}<ESC>
-autocmd FileType tex nmap <localleader>tt viWB<ESC>i\texttt{<ESC>Ea}<ESC>
-autocmd FileType tex nmap <localleader>sc viWB<ESC>i\textsc{<ESC>Ea}<ESC>
-autocmd FileType tex nmap <localleader>bf viWB<ESC>i\textbf{<ESC>Ea}<ESC>
-autocmd FileType tex nmap <localleader>ve viWB<ESC>i\verb+<ESC>Ea+<ESC>
-autocmd FileType tex nmap <localleader>ssf viWB<ESC>i\ssf{<ESC>mlvE:s/\%V_/\\_/g<RETURN>`lEa}<ESC>
-" autocmd FileType tex nmap <leader>q gwap:wa<RETURN>:make<RETURN>
-"}}}
-
-" HTML {{{
-autocmd FileType html vmap <localleader>p "vc<lt>p><C-R>v</p><ESC>
-autocmd FileType html nmap <localleader>i viWB<ESC>i<lt>i><ESC>Ea</i><ESC>
-autocmd FileType html nmap <localleader>b viWB<ESC>i<lt>b><ESC>Ea</b><ESC>
-" }}}
-
-" sh {{{
-autocmd FileType sh set tabstop=4 softtabstop=4 shiftwidth=4 expandtab
-autocmd FileType sh set path+=~/bin/ include=^\\s*\\.
-let g:is_posix = 1
-let g:sh_noisk = 1 " please, don't fuck with me
-" }}}
-
-" Python {{{
-autocmd FileType python set tabstop=4 softtabstop=4 shiftwidth=4 expandtab
-autocmd FileType python set errorformat=%f:%l:%m makeprg=pylint\ %
-autocmd FileType python set omnifunc=pythoncomplete#Complete
-let python_highlight_all = 1
-let python_slow_sync = 1
-" nmap <localleader>3 :set makeprg=pylint3\ % <bar> let g:syntastic_python_python_exec = '/usr/bin/python3'<cr>
-nmap <localleader>3 :set makeprg=pylint3\ % <cr>
-" nmap <localleader>2 :set makeprg=pylint\ % <bar> let g:syntastic_python_python_exec = '/usr/bin/python2'<cr>
-nmap <localleader>2 :set makeprg=pylint\ % <cr>
-
-" }}}
-
-" mail, text, gitcommit {{{
-autocmd FileType mail set textwidth=64 spell
-autocmd FileType text set textwidth=68 spell
-autocmd FileType gitcommit set textwidth=68
-" }}}
-
-nmap <C-k> :bprev<cr>
-nmap <C-j> :bnext<cr>
-nnoremap j gj
-vnoremap j gj
-nnoremap k gk
-vnoremap k gk
-
-nnoremap <silent> <C-a>h :TmuxNavigateLeft<cr>
-nnoremap <silent> <C-a>j :TmuxNavigateDown<cr>
-nnoremap <silent> <C-a>k :TmuxNavigateUp<cr>
-nnoremap <silent> <C-a>l :TmuxNavigateRight<cr>
-nnoremap <silent> <C-a>\ :TmuxNavigatePrevious<cr>
-
-nmap <leader>e :e **/
-nmap <leader>x :!./%<cr>
-nmap <leader>w :w !sudo tee % &> /dev/null<cr>
-cnoremap w!! w !sudo tee % >/dev/null
-vmap <leader>y "+y
-map <leader>p "+p
-nmap <leader>n :NERDTreeToggle<cr>
-nmap <leader>m :w<cr>:make<cr>
-
-" delete duplicated spaces, delete trailing spaces:
-map <leader>dds :%s/\([.]\)<space><space>/\1<space>/g<cr>
-map <leader>dts :%s/\s\+$//<cr>
-" turn on spell checking
-map <leader>sen :set spell<cr>:set spelllang=en_us<cr>
-map <leader>spt :set spell<cr>:set spelllang=pt_br<cr>
-
-nmap <leader>date "=strftime("%Y%m%d.%H%M")<cr>P
-imap <leader>date <C-R>=strftime("%Y%m%d.%H%M")<cr>
+source ~/.vim/settings/colors.vim
+source ~/.vim/settings/file-types.vim
+source ~/.vim/settings/mappings.vim
