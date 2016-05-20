@@ -82,7 +82,7 @@ set incsearch
 set showmatch
 set textwidth=0
 set history=1000
-set viminfo='1000,<500
+set viminfo='100,f1,:10,/10,n$HOME/.cache/viminfo
 set autoindent
 set nosmartindent
 set joinspaces
