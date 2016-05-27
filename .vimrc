@@ -20,6 +20,7 @@ source ~/.vim/settings/plugins/airline.vim
 let NERDTreeDirArrows = 0
 let NERDChristmasTree = 0
 let g:tmux_navigator_no_mappings = 1
+let g:qs_highlight_on_keys = ['f', 'F', 't', 'T']
 " call dein#add('tpope/vim-obsession')
 " call dein#add('majutsushi/tagbar')
 " call dein#add('myusuf3/numbers.vim')
