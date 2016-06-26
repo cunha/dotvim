@@ -54,7 +54,6 @@ set updatetime=200  " write swap file after 200 seconds
 " editing {{{
 set incsearch
 set showmatch
-set textwidth=0
 set history=1000
 set viminfo='100,f1,:10,/10,n$HOME/.cache/viminfo
 set autoindent
