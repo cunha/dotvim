@@ -29,4 +29,9 @@ nnoremap <silent> <C-a>k :TmuxNavigateUp<cr>
 nnoremap <silent> <C-a>l :TmuxNavigateRight<cr>
 nnoremap <silent> <C-a>\ :TmuxNavigatePrevious<cr>
 
+nnoremap <silent> <C-left> :TmuxNavigateLeft<cr>
+nnoremap <silent> <C-down> :TmuxNavigateDown<cr>
+nnoremap <silent> <C-up> :TmuxNavigateUp<cr>
+nnoremap <silent> <C-right> :TmuxNavigateRight<cr>
+
 
