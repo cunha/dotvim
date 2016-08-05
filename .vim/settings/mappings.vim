@@ -23,15 +23,14 @@ map <leader>spt :setlocal spell<cr>:setlocal spelllang=pt_br<cr>
 nmap <leader>date "=strftime("%Y%m%d.%H%M")<cr>P
 imap <leader>date <C-R>=strftime("%Y%m%d.%H%M")<cr>
 
-" nnoremap <silent> <C-a>h :TmuxNavigateLeft<cr>
-" nnoremap <silent> <C-a>j :TmuxNavigateDown<cr>
-" nnoremap <silent> <C-a>k :TmuxNavigateUp<cr>
-" nnoremap <silent> <C-a>l :TmuxNavigateRight<cr>
-" nnoremap <silent> <C-a>\ :TmuxNavigatePrevious<cr>
+nnoremap <silent> <C-a>h :TmuxNavigateLeft<cr>
+nnoremap <silent> <C-a>j :TmuxNavigateDown<cr>
+nnoremap <silent> <C-a>k :TmuxNavigateUp<cr>
+nnoremap <silent> <C-a>l :TmuxNavigateRight<cr>
 
-nnoremap <silent> <C-left> :TmuxNavigateLeft<cr>
-nnoremap <silent> <C-down> :TmuxNavigateDown<cr>
-nnoremap <silent> <C-up> :TmuxNavigateUp<cr>
-nnoremap <silent> <C-right> :TmuxNavigateRight<cr>
+"nnoremap <silent> <C-left> :TmuxNavigateLeft<cr>
+"nnoremap <silent> <C-down> :TmuxNavigateDown<cr>
+"nnoremap <silent> <C-up> :TmuxNavigateUp<cr>
+"nnoremap <silent> <C-right> :TmuxNavigateRight<cr>
 
 
