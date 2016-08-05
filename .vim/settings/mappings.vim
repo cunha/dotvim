@@ -17,8 +17,8 @@ nmap <leader>m :w<cr>:make<cr>
 map <leader>dds :%s/\([.]\)<space><space>/\1<space>/g<cr>
 map <leader>dts :%s/\s\+$//<cr>
 " turn on spell checking:
-map <leader>sen :set spell<cr>:set spelllang=en_us<cr>
-map <leader>spt :set spell<cr>:set spelllang=pt_br<cr>
+map <leader>sen :setlocal spell<cr>:setlocal spelllang=en_us<cr>
+map <leader>spt :setlocal spell<cr>:setlocal spelllang=pt_br<cr>
 
 nmap <leader>date "=strftime("%Y%m%d.%H%M")<cr>P
 imap <leader>date <C-R>=strftime("%Y%m%d.%H%M")<cr>
