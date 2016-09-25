@@ -39,5 +39,5 @@ nmap <localleader>2 :set makeprg=pylint\ % <cr>
 
 autocmd FileType mail set textwidth=64 spell
 autocmd FileType text set textwidth=68 spell
-autocmd FileType markdown set textwidth=68 spell
+autocmd FileType markdown set textwidth=68 tabstop=4 softtabstop=4 shiftwidth=4 expandtab spell
 autocmd FileType gitcommit set textwidth=68
