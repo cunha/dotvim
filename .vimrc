@@ -21,6 +21,7 @@ let NERDTreeDirArrows = 0
 let NERDChristmasTree = 0
 let g:tmux_navigator_no_mappings = 1
 let g:qs_highlight_on_keys = ['f', 'F', 't', 'T']
+" call dein#add('Valloric/YouCompleteMe')
 " call dein#add('tpope/vim-obsession')
 " call dein#add('majutsushi/tagbar')
 " call dein#add('myusuf3/numbers.vim')
@@ -124,5 +125,6 @@ set foldenable
 " }}}
 
 source ~/.vim/settings/colors.vim
+source ~/.vim/settings/cscope.vim
 source ~/.vim/settings/file-types.vim
 source ~/.vim/settings/mappings.vim
