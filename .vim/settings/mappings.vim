@@ -1,3 +1,5 @@
+inoremap jj <esc>
+
 nmap <C-k> :bprev<cr>
 nmap <C-j> :bnext<cr>
 nnoremap j gj
