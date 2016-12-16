@@ -124,7 +124,19 @@ set foldenable
 " set foldcolumn=1
 " }}}
 
+set exrc
+
 source ~/.vim/settings/colors.vim
 source ~/.vim/settings/cscope.vim
 source ~/.vim/settings/file-types.vim
 source ~/.vim/settings/mappings.vim
+
+if filereadable("./.syntax.vim")
+	source .syntax.vim
+endif
+
+" let gitroot = systemlist("git rev-parse --show-toplevel")[0]
+" if filereadable(gitroot . "/.syntax.vim")
+" 	exec "source " . gitroot . "/.syntax.vim"
+" endif
+
