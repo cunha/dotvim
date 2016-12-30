@@ -3,8 +3,10 @@ autocmd BufNewFile,BufRead *cunha_wp_wordpress* set filetype=markdown
 autocmd BufNewFile,BufRead mail.google.com* set filetype=mail
 
 autocmd FileType c set cindent
+autocmd FileType c set tabstop=8 softtabstop=8 shiftwidth=8 noexpandtab
 autocmd FileType c imap <localleader>logea logea(__FILE__, __LINE__, NULL);
 autocmd FileType cpp set cindent
+autocmd FileType cpp set tabstop=8 softtabstop=8 shiftwidth=8 noexpandtab
 
 let g:tex_flavor = "latex"
 let g:tex_indent_items = 0

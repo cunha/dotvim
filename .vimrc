@@ -13,14 +13,18 @@ call dein#add('vim-airline/vim-airline')
 call dein#add('vim-airline/vim-airline-themes')
 call dein#add('vim-scripts/Align')
 call dein#add('vim-scripts/a.vim')
+call dein#add('vim-scripts/YankRing.vim')
 call dein#add('christoomey/vim-tmux-navigator')
-call dein#add('altercation/vim-colors-solarized')
 call dein#end()
 source ~/.vim/settings/plugins/airline.vim
-let NERDTreeDirArrows = 0
-let NERDChristmasTree = 0
+let g:NERDTreeDirArrows = 0
+let g:NERDChristmasTree = 0
+let g:NERDDefaultAlign = 'left'
+let g:NERDTrimTrailingWhitespace = 1
+let g:NERDSpaceDelims = 1
 let g:tmux_navigator_no_mappings = 1
 let g:qs_highlight_on_keys = ['f', 'F', 't', 'T']
+" call dein#add('altercation/vim-colors-solarized')
 " call dein#add('Valloric/YouCompleteMe')
 " call dein#add('tpope/vim-obsession')
 " call dein#add('majutsushi/tagbar')

@@ -35,4 +35,5 @@ nnoremap <silent> <C-a>l :TmuxNavigateRight<cr>
 "nnoremap <silent> <C-up> :TmuxNavigateUp<cr>
 "nnoremap <silent> <C-right> :TmuxNavigateRight<cr>
 
-
+nmap <silent> <leader>ev :edit ~/.vimrc<cr>
+nmap <silent> <leader>sv :source ~/.vimrc<cr>
