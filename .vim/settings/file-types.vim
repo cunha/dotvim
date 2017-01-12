@@ -1,6 +1,7 @@
 autocmd BufNewFile,BufRead *plot set filetype=gnuplot
 autocmd BufNewFile,BufRead *cunha_wp_wordpress* set filetype=markdown
 autocmd BufNewFile,BufRead mail.google.com* set filetype=mail
+autocmd BufNewFile,BufRead *mail set filetype=mail
 
 autocmd FileType c set cindent
 autocmd FileType c set tabstop=8 softtabstop=8 shiftwidth=8 noexpandtab
@@ -39,7 +40,9 @@ nmap <localleader>3 :set makeprg=pylint3\ % <cr>
 " nmap <localleader>2 :set makeprg=pylint\ % <bar> let g:syntastic_python_python_exec = '/usr/bin/python2'<cr>
 nmap <localleader>2 :set makeprg=pylint\ % <cr>
 
-autocmd FileType mail set textwidth=64 spell
+autocmd FileType mail set textwidth=64 spell foldmethod=expr
+autocmd FileType mail set foldexpr=strlen(substitute(substitute(getline(v:lnum),'\\s','',\"g\"),'[^>].*','',''))
+
 autocmd FileType text set textwidth=68 spell
 autocmd FileType markdown set textwidth=68 tabstop=4 softtabstop=4 shiftwidth=4 expandtab spell
 autocmd FileType gitcommit set textwidth=68
