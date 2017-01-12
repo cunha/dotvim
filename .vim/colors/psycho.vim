@@ -274,7 +274,7 @@ hi SpecialKey		ctermfg=237			ctermbg=NONE	cterm=NONE		guifg=#005faf	guibg=NONE		
 
 hi Cursor			ctermfg=NONE		ctermbg=NONE	cterm=NONE		guifg=lightgray	guibg=NONE		gui=reverse
 hi CursorColumn		ctermfg=NONE		ctermbg=234		cterm=NONE		guifg=NONE		guibg=#1c1c1c	gui=NONE
-hi CursorLine		ctermfg=NONE		ctermbg=234		cterm=NONE		guifg=NONE		guibg=#1c1c1c	gui=NONE
+hi CursorLine		ctermfg=NONE		ctermbg=233		cterm=NONE		guifg=NONE		guibg=#1c1c1c	gui=NONE
 hi ColorColumn		ctermfg=NONE		ctermbg=234		cterm=NONE		guifg=NONE		guibg=#1c1c1c	gui=NONE
 
 hi LineNr			ctermfg=245			ctermbg=17		cterm=NONE		guifg=#8a8a8a	guibg=#00005f	gui=NONE
@@ -288,7 +288,7 @@ hi TabLineFill		ctermfg=NONE		ctermbg=17		cterm=NONE		guifg=#3a3a3a	guibg=#3a3a3
 hi TabLineSel		ctermfg=251			ctermbg=17		cterm=NONE		guifg=white		guibg=#585858	gui=NONE
 
 hi Folded			ctermfg=241			ctermbg=235		cterm=NONE		guifg=darkgray	guibg=#3a3a3a	gui=NONE
-hi Visual			ctermfg=NONE		ctermbg=235		cterm=NONE		guifg=NONE		guibg=#262626	gui=NONE
+hi Visual			ctermfg=NONE		ctermbg=236		cterm=NONE		guifg=NONE		guibg=#262626	gui=NONE
 hi VisualNOS		ctermfg=NONE		ctermbg=52		cterm=NONE		guifg=NONE		guibg=#00005f	gui=NONE
 
 hi MatchParen		ctermfg=NONE		ctermbg=237		cterm=bold		guifg=white		guibg=#3a3a3a	gui=bold
@@ -308,7 +308,7 @@ hi DiffChange		ctermfg=NONE		ctermbg=53		cterm=NONE		guifg=NONE		guibg=#000087	g
 hi DiffDelete		ctermfg=NONE		ctermbg=52		cterm=NONE		guifg=NONE		guibg=#870087	gui=NONE
 hi DiffText			ctermfg=NONE		ctermbg=52		cterm=NONE		guifg=NONE		guibg=#870000	gui=NONE
 
-hi SpellBad			ctermfg=NONE		ctermbg=52		cterm=NONE		guifg=NONE		guibg=#870000	gui=NONE
+hi SpellBad			ctermfg=NONE		ctermbg=88		cterm=NONE		guifg=NONE		guibg=#870000	gui=NONE
 hi SpellCap			ctermfg=NONE		ctermbg=22		cterm=NONE		guifg=NONE		guibg=#005f00	gui=NONE
 hi SpellLocal		ctermfg=NONE		ctermbg=22		cterm=NONE		guifg=NONE		guibg=#005f00	gui=NONE
 hi SpellRare		ctermfg=NONE		ctermbg=22		cterm=NONE		guifg=NONE		guibg=#005f00	gui=NONE
