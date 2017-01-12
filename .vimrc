@@ -25,6 +25,7 @@ let g:NERDSpaceDelims = 1
 let g:tmux_navigator_no_mappings = 1
 let g:qs_highlight_on_keys = ['f', 'F', 't', 'T']
 " call dein#add('altercation/vim-colors-solarized')
+" call dein#add('itchyny/calendar.vim')
 " call dein#add('Valloric/YouCompleteMe')
 " call dein#add('tpope/vim-obsession')
 " call dein#add('majutsushi/tagbar')
@@ -143,4 +144,6 @@ endif
 " if filereadable(gitroot . "/.syntax.vim")
 " 	exec "source " . gitroot . "/.syntax.vim"
 " endif
+
+autocmd VimLeave * call system("xsel -ib", getreg('+'))
 
