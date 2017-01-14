@@ -2,19 +2,21 @@ set nocompatible
 set runtimepath+=~/.vim/plugins/dein.vim/
 "{{{
 call dein#begin(expand('~/.cache/dein'))
+call dein#add('/home/cunha/.vim/plugins/dein.vim')
+call dein#add('/home/cunha/.config/zsh/fzf.git')
+call dein#add('lervag/vimtex')
+call dein#add('moll/vim-bbye')
+call dein#add('scrooloose/nerdcommenter')
+call dein#add('scrooloose/nerdtree')
 call dein#add('scrooloose/syntastic')
-call dein#add('unblevable/quick-scope')
 call dein#add('tpope/vim-fugitive')
 call dein#add('tpope/vim-repeat')
-call dein#add('scrooloose/nerdtree')
-call dein#add('scrooloose/nerdcommenter')
-call dein#add('moll/vim-bbye')
+call dein#add('unblevable/quick-scope')
 call dein#add('vim-airline/vim-airline')
 call dein#add('vim-airline/vim-airline-themes')
 call dein#add('vim-scripts/Align')
 call dein#add('vim-scripts/a.vim')
 call dein#add('vim-scripts/YankRing.vim')
-call dein#add('christoomey/vim-tmux-navigator')
 call dein#end()
 source ~/.vim/settings/plugins/airline.vim
 let g:NERDTreeDirArrows = 0
@@ -24,6 +26,9 @@ let g:NERDTrimTrailingWhitespace = 1
 let g:NERDSpaceDelims = 1
 let g:tmux_navigator_no_mappings = 1
 let g:qs_highlight_on_keys = ['f', 'F', 't', 'T']
+" call dein#add('kien/ctrlp.vim')
+" nmap <C-o> :CtrlP .<cr>
+" call dein#add('christoomey/vim-tmux-navigator')
 " call dein#add('altercation/vim-colors-solarized')
 " call dein#add('itchyny/calendar.vim')
 " call dein#add('Valloric/YouCompleteMe')
@@ -31,8 +36,6 @@ let g:qs_highlight_on_keys = ['f', 'F', 't', 'T']
 " call dein#add('majutsushi/tagbar')
 " call dein#add('myusuf3/numbers.vim')
 " nmap <leader>tnu :NumbersToggle<CR>
-" call dein#add('kien/ctrlp.vim')
-" nmap <C-o> :CtrlP /home/cunha<cr>
 " }}}
 
 " scripts to check out {{{
@@ -47,7 +50,7 @@ let g:qs_highlight_on_keys = ['f', 'F', 't', 'T']
 filetype on
 filetype plugin on
 filetype indent on
-let mapleader = "\\"
+let mapleader = ";"
 let maplocalleader = ","
 
 " file management {{{
@@ -68,6 +71,7 @@ set joinspaces
 set textwidth=0 " so each coauthor
 set wrap        " can break lines
 set linebreak   " wherever they choose
+set breakindent
 set formatoptions-=t " do not format text, I do it myself
 set formatoptions+=o " do not continue comments when pushing o/O
 set formatoptions+=1 " do not break before one-letter words
@@ -97,8 +101,8 @@ set cursorline
 set scrolloff=3
 set scroll=5
 set colorcolumn=80
-set t_Co=16
-" set t_Co=256
+" set t_Co=16
+set t_Co=256
 set list
 set listchars=tab:»\ ,eol:¬,trail:·,extends:<,precedes:>
 set backspace=2

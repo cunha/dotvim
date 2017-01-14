@@ -12,7 +12,7 @@ autocmd FileType cpp set tabstop=8 softtabstop=8 shiftwidth=8 noexpandtab
 let g:tex_flavor = "latex"
 let g:tex_indent_items = 0
 let g:tex_indent_brace = 0
-autocmd FileType tex set noautoindent nosmartindent spell
+autocmd FileType tex set noautoindent nosmartindent spell textwidth=68
 autocmd FileType tex nmap <localleader>em viWB<ESC>i\emph{<ESC>Ea}<ESC>
 autocmd FileType tex nmap <localleader>tt viWB<ESC>i\texttt{<ESC>Ea}<ESC>
 autocmd FileType tex nmap <localleader>sc viWB<ESC>i\textsc{<ESC>Ea}<ESC>
