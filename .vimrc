@@ -4,6 +4,7 @@ set runtimepath+=~/.vim/plugins/dein.vim/
 call dein#begin(expand('~/.cache/dein'))
 call dein#add('/home/cunha/.vim/plugins/dein.vim')
 call dein#add('/home/cunha/.config/zsh/fzf.git')
+call dein#add('christoomey/vim-tmux-navigator')
 call dein#add('lervag/vimtex')
 call dein#add('moll/vim-bbye')
 call dein#add('scrooloose/nerdcommenter')
@@ -28,7 +29,6 @@ let g:tmux_navigator_no_mappings = 1
 let g:qs_highlight_on_keys = ['f', 'F', 't', 'T']
 " call dein#add('kien/ctrlp.vim')
 " nmap <C-o> :CtrlP .<cr>
-" call dein#add('christoomey/vim-tmux-navigator')
 " call dein#add('altercation/vim-colors-solarized')
 " call dein#add('itchyny/calendar.vim')
 " call dein#add('Valloric/YouCompleteMe')
