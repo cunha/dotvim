@@ -1,4 +1,3 @@
-set background=light
 let g:solarized_termcolors = 16
 let g:solarized_termtrans = 0
 let g:solarized_degrade = 0
@@ -10,7 +9,8 @@ let g:solarized_visibility = "medium"
 let g:solarized_hitrail = 0
 let g:solarized_menu = 0
 colorscheme solarized
+set background=light
 syntax on
 
 " colorscheme psycho
-syntax on
+" syntax on
