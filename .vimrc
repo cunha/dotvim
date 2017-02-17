@@ -26,6 +26,7 @@ source ~/.vim/settings/plugins/airline.vim
 let g:vimtex_view_method = 'zathura'
 let g:vimtex_view_general_viewer = 'zathura'
 let g:vimtex_quickfix_open_on_warning = 0
+let g:yankring_history_dir = '$HOME/.cache/'
 let g:NERDTreeDirArrows = 0
 let g:NERDChristmasTree = 0
 let g:NERDDefaultAlign = 'left'
