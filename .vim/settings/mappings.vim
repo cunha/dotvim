@@ -14,6 +14,7 @@ nnoremap <leader>x :!./%<cr>
 nnoremap <leader>w :w<cr>
 nnoremap <leader>W :w !sudo tee % &> /dev/null<cr>
 vnoremap <leader>y "+y
+nnoremap <leader>ya :%y+<cr>
 noremap <leader>p "+p
 nnoremap <leader>n :NERDTreeToggle<cr>
 nnoremap <leader>m :w<cr>:make<cr>
