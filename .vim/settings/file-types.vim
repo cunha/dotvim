@@ -27,6 +27,7 @@ augroup latex
 	autocmd FileType tex nmap <buffer> <localleader>tt viWB<ESC>i\texttt{<ESC>Ea}<ESC>
 	autocmd FileType tex nmap <buffer> <localleader>sc viWB<ESC>i\textsc{<ESC>Ea}<ESC>
 	autocmd FileType tex nmap <buffer> <localleader>bf viWB<ESC>i\textbf{<ESC>Ea}<ESC>
+	autocmd FileType tex nmap <buffer> <localleader>sf viWB<ESC>i\textsf{<ESC>Ea}<ESC>
 	autocmd FileType tex nmap <buffer> <localleader>ve viWB<ESC>i\verb+<ESC>Ea+<ESC>
 	autocmd FileType tex nmap <buffer> <localleader>ssf viWB<ESC>i\ssf{<ESC>mlvE:s/\%V_/\\_/g<RETURN>`lEa}<ESC>
 	" autocmd FileType tex nmap <leader>q gwap:wa<RETURN>:make<RETURN>
@@ -54,8 +55,8 @@ augroup pythonlang
 	autocmd FileType python setlocal tabstop=4 softtabstop=4 shiftwidth=4 expandtab
 	autocmd FileType python setlocal errorformat=%f:%l:%m makeprg=pylint\ %
 	autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
-	autocmd FileType python nnoremap <buffer> <localleader>3 :set makeprg=pylint3\ % <cr>
-	autocmd FileType python nnoremap <buffer> <localleader>2 :set makeprg=pylint\ % <cr>
+	autocmd FileType python nnoremap <buffer> <localleader>3 :set makeprg=pylint3\ % <bar> let g:syntastic_python_python_exec = '/usr/bin/python3'<cr>
+	autocmd FileType python nnoremap <buffer> <localleader>2 :set makeprg=pylint\ % <bar> let g:syntastic_python_python_exec = '/usr/bin/python2'<cr>
 	" nmap <localleader>3 :set makeprg=pylint3\ % <bar> let g:syntastic_python_python_exec = '/usr/bin/python3'<cr>
 	" nmap <localleader>2 :set makeprg=pylint\ % <bar> let g:syntastic_python_python_exec = '/usr/bin/python2'<cr>
 augroup end
