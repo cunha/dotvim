@@ -148,4 +148,9 @@ autocmd VimLeave * call system("xsel -ib", getreg('+'))
 set secure
 set exrc
 
-
+function! SetClass()
+	syntax off
+	set nolist
+	set nocursorline
+	set colorcolumn=400
+endfunction
