@@ -15,7 +15,8 @@ if !exists('g:airline_symbols')
 endif
 let g:airline_symbols.maxlinenr = ''
 let g:airline_symbols.whitespace = 'Ξ'
-" let g:airline_symbols.crypt = '🔒'
+let g:airline_symbols.crypt = '🔒'
+let g:airline_symbols.readonly = ''
 let g:airline_symbols.linenr = ''
 " let g:airline_symbols.paste = 'ρ'
 " let g:airline_symbols.paste = 'Þ'
