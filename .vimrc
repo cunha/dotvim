@@ -22,6 +22,7 @@ call dein#add('vim-scripts/Align')
 call dein#add('vim-scripts/a.vim')
 call dein#add('vim-scripts/YankRing.vim')
 call dein#end()
+" CHECK tmhedberg/SimpylFold
 source ~/.vim/settings/plugins/airline.vim
 let g:vimtex_view_method = 'zathura'
 let g:vimtex_view_general_viewer = 'zathura'
