@@ -23,12 +23,12 @@ let g:tex_indent_brace = 0
 augroup latex
 	autocmd!
 	autocmd FileType tex setlocal noautoindent nosmartindent spell textwidth=68
-	autocmd FileType tex nmap <buffer> <localleader>em viWB<ESC>i\emph{<ESC>Ea}<ESC>
-	autocmd FileType tex nmap <buffer> <localleader>tt viWB<ESC>i\texttt{<ESC>Ea}<ESC>
-	autocmd FileType tex nmap <buffer> <localleader>sc viWB<ESC>i\textsc{<ESC>Ea}<ESC>
-	autocmd FileType tex nmap <buffer> <localleader>bf viWB<ESC>i\textbf{<ESC>Ea}<ESC>
-	autocmd FileType tex nmap <buffer> <localleader>sf viWB<ESC>i\textsf{<ESC>Ea}<ESC>
-	autocmd FileType tex nmap <buffer> <localleader>ve viWB<ESC>i\verb+<ESC>Ea+<ESC>
+	autocmd FileType tex nmap <buffer> <localleader>em viWB<ESC>i\emph{<ESC>ea}<ESC>
+	autocmd FileType tex nmap <buffer> <localleader>tt viWB<ESC>i\texttt{<ESC>ea}<ESC>
+	autocmd FileType tex nmap <buffer> <localleader>sc viWB<ESC>i\textsc{<ESC>ea}<ESC>
+	autocmd FileType tex nmap <buffer> <localleader>bf viWB<ESC>i\textbf{<ESC>ea}<ESC>
+	autocmd FileType tex nmap <buffer> <localleader>sf viWB<ESC>i\textsf{<ESC>ea}<ESC>
+	autocmd FileType tex nmap <buffer> <localleader>ve viWB<ESC>i\verb+<ESC>ea+<ESC>
 	autocmd FileType tex nmap <buffer> <localleader>ssf viWB<ESC>i\ssf{<ESC>mlvE:s/\%V_/\\_/g<RETURN>`lEa}<ESC>
 	" autocmd FileType tex nmap <leader>q gwap:wa<RETURN>:make<RETURN>
 augroup end
