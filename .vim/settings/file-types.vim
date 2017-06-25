@@ -55,8 +55,8 @@ augroup pythonlang
 	autocmd FileType python setlocal tabstop=4 softtabstop=4 shiftwidth=4 expandtab
 	autocmd FileType python setlocal errorformat=%f:%l:%m makeprg=pylint\ %
 	autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
-	autocmd FileType python nnoremap <buffer> <localleader>3 :set makeprg=pylint3\ % <bar> let g:syntastic_python_python_exec = '/usr/bin/python3'<cr>
-	autocmd FileType python nnoremap <buffer> <localleader>2 :set makeprg=pylint\ % <bar> let g:syntastic_python_python_exec = '/usr/bin/python2'<cr>
+	autocmd FileType python nnoremap <buffer> <localleader>3 :set makeprg=pylint3\ % <bar> let g:syntastic_python_checkers = ['pylint3']<cr>
+	autocmd FileType python nnoremap <buffer> <localleader>2 :set makeprg=pylint\ % <bar> let g:syntastic_python_checkers = ['pylint']<cr>
 	" nmap <localleader>3 :set makeprg=pylint3\ % <bar> let g:syntastic_python_python_exec = '/usr/bin/python3'<cr>
 	" nmap <localleader>2 :set makeprg=pylint\ % <bar> let g:syntastic_python_python_exec = '/usr/bin/python2'<cr>
 augroup end
@@ -68,7 +68,6 @@ augroup text
 	autocmd FileType text setlocal textwidth=68 spell
 	autocmd FileType markdown setlocal textwidth=68 tabstop=4 softtabstop=4 shiftwidth=4 expandtab spell
 	autocmd FileType gitcommit setlocal textwidth=68
-	autocmd FileType yaml setlocal tabstop=2 softtabstop=2 shiftwidth=2 expandtab
-	autocmd FileType xml setlocal tabstop=2 softtabstop=2 shiftwidth=2 expandtab
+	autocmd FileType xml,yaml,json setlocal tabstop=2 softtabstop=2 shiftwidth=2 expandtab
 augroup end
 
