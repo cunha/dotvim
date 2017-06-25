@@ -69,5 +69,6 @@ augroup text
 	autocmd FileType markdown setlocal textwidth=68 tabstop=4 softtabstop=4 shiftwidth=4 expandtab spell
 	autocmd FileType gitcommit setlocal textwidth=68
 	autocmd FileType yaml setlocal tabstop=2 softtabstop=2 shiftwidth=2 expandtab
+	autocmd FileType xml setlocal tabstop=2 softtabstop=2 shiftwidth=2 expandtab
 augroup end
 
