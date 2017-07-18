@@ -38,11 +38,16 @@ let g:tmux_navigator_no_mappings = 1
 let g:qs_highlight_on_keys = ['f', 'F', 't', 'T']
 " call dein#add('kien/ctrlp.vim')
 " nmap <C-o> :CtrlP .<cr>
-" call dein#add('itchyny/calendar.vim')
 " call dein#add('Valloric/YouCompleteMe')
 " call dein#add('tpope/vim-obsession')
 " call dein#add('majutsushi/tagbar')
 " call dein#add('myusuf3/numbers.vim')
+" call dein#add('SirVer/ultisnips')
+" call dein#add('airblade/vim-gitgutter')
+" call dein#add('junegunn/vim-easy-align')
+" call dein#add('junegunn/vim-easy-align')
+"
+"
 " nmap <leader>tnu :NumbersToggle<CR>
 " }}}
 
