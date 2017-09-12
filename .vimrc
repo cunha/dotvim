@@ -22,7 +22,7 @@ call dein#add('vim-scripts/Align')
 call dein#add('vim-scripts/a.vim')
 " call dein#add('vim-scripts/YankRing.vim')
 " call dein#add('tmhedberg/SimpylFold')
-call dein#add('mrtazz/simplenote.vim')
+" call dein#add('mrtazz/simplenote.vim')
 call dein#end()
 source ~/.vim/settings/plugins/airline.vim
 source ~/.vim/settings/plugins/fugitive.vim
