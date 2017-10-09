@@ -26,8 +26,8 @@ call dein#add('vim-scripts/a.vim')
 call dein#end()
 source ~/.vim/settings/plugins/airline.vim
 source ~/.vim/settings/plugins/fugitive.vim
-let g:vimtex_view_method = 'zathura'
-let g:vimtex_view_general_viewer = 'zathura'
+let g:vimtex_view_method = 'general'
+let g:vimtex_view_general_viewer = 'evince'
 let g:vimtex_quickfix_open_on_warning = 0
 let g:yankring_history_dir = '$HOME/.cache/'
 let g:NERDTreeDirArrows = 0
