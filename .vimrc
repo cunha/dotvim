@@ -11,6 +11,11 @@ call dein#add('christoomey/vim-tmux-navigator')
 call dein#add('haya14busa/vim-poweryank')
 call dein#add('lervag/vimtex')
 call dein#add('moll/vim-bbye')
+call dein#add('prabirshrestha/async.vim')
+call dein#add('prabirshrestha/asyncomplete.vim')
+call dein#add('prabirshrestha/asyncomplete-lsp.vim')
+call dein#add('prabirshrestha/vim-lsp')
+call dein#add('rust-lang/rust.vim')
 call dein#add('scrooloose/nerdcommenter')
 call dein#add('scrooloose/nerdtree')
 call dein#add('scrooloose/syntastic')
@@ -28,8 +33,8 @@ call dein#add('vim-scripts/a.vim')
 call dein#end()
 source ~/.vim/settings/plugins/airline.vim
 source ~/.vim/settings/plugins/fugitive.vim
-let g:vimtex_view_method = 'general'
-let g:vimtex_view_general_viewer = 'evince'
+let g:vimtex_view_method = 'zathura'
+" let g:vimtex_view_general_viewer = 'evince'
 let g:vimtex_quickfix_open_on_warning = 0
 let g:yankring_history_dir = '$HOME/.cache/'
 let g:NERDTreeDirArrows = 0

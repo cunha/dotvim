@@ -61,6 +61,19 @@ augroup pythonlang
 	" nmap <localleader>2 :set makeprg=pylint\ % <bar> let g:syntastic_python_python_exec = '/usr/bin/python2'<cr>
 augroup end
 
+augroup rustlang
+	autocmd!
+	autocmd FileType rust setlocal tabstop=4 softtabstop=4 shiftwidth=4 expandtab
+	autocmd FileType rust let g:syntastic_rust_checkers = ['rustc']
+augroup end
+if executable('rls')
+    au User lsp_setup call lsp#register_server({
+        \ 'name': 'rls',
+        \ 'cmd': {server_info->['rustup', 'run', 'nightly', 'rls']},
+        \ 'whitelist': ['rust'],
+        \ })
+endif
+
 augroup text
 	autocmd!
 	autocmd FileType mail setlocal textwidth=68 spell foldmethod=expr
