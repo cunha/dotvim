@@ -15,7 +15,6 @@ call dein#add('prabirshrestha/async.vim')
 call dein#add('prabirshrestha/asyncomplete.vim')
 call dein#add('prabirshrestha/asyncomplete-lsp.vim')
 call dein#add('prabirshrestha/vim-lsp')
-call dein#add('rust-lang/rust.vim')
 call dein#add('scrooloose/nerdcommenter')
 call dein#add('scrooloose/nerdtree')
 call dein#add('scrooloose/syntastic')
@@ -27,6 +26,9 @@ call dein#add('vim-airline/vim-airline')
 call dein#add('vim-airline/vim-airline-themes')
 call dein#add('vim-scripts/Align')
 call dein#add('vim-scripts/a.vim')
+" Rust:
+call dein#add('Nonius/cargo.vim')
+call dein#add('rust-lang/rust.vim')
 " call dein#add('vim-scripts/YankRing.vim')
 " call dein#add('tmhedberg/SimpylFold')
 " call dein#add('mrtazz/simplenote.vim')
@@ -168,3 +170,6 @@ function! SetClass()
 	set nocursorline
 	set colorcolumn=400
 endfunction
+
+let g:lsp_log_verbose = 1
+let g:lsp_log_file = expand('~/vim-lsp.log')
