@@ -22,7 +22,11 @@ let g:airline_symbols.linenr = ''
 " let g:airline_symbols.paste = 'Þ'
 " let g:airline_symbols.paste = 'PASTE'
 " let g:airline_symbols.branch = 'Y'
+let g:airline_symbols.spell = '§'
 
 " let g:airline_section_z = airline#section#create(['%{ObsessionStatus(''>'', ''•'')} ', 'windowswap', '%3p%% ', 'linenr', ':%3v '])
 " let g:airline_section_z = airline#section#create(['%3p%% ', 'linenr', ':%3v '])
 
+let g:airline#extensions#wordcount#enabled = 0
+let g:airline#extensions#wordcount#formatter#default#fmt = '%sw'
+let g:airline#extensions#wordcount#formatter#default#fmt_short = '%sw'
