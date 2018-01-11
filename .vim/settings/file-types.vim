@@ -53,12 +53,10 @@ let python_slow_sync = 1
 augroup pythonlang
 	autocmd!
 	autocmd FileType python setlocal tabstop=4 softtabstop=4 shiftwidth=4 expandtab
-	autocmd FileType python setlocal errorformat=%f:%l:%m makeprg=pylint\ %
+	autocmd FileType python setlocal errorformat=%f:%l:%m makeprg=pylint3\ %
 	autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
-	autocmd FileType python nnoremap <buffer> <localleader>3 :set makeprg=pylint3\ % <bar> let g:syntastic_python_checkers = ['pylint3']<cr>
-	autocmd FileType python nnoremap <buffer> <localleader>2 :set makeprg=pylint\ % <bar> let g:syntastic_python_checkers = ['pylint']<cr>
-	" nmap <localleader>3 :set makeprg=pylint3\ % <bar> let g:syntastic_python_python_exec = '/usr/bin/python3'<cr>
-	" nmap <localleader>2 :set makeprg=pylint\ % <bar> let g:syntastic_python_python_exec = '/usr/bin/python2'<cr>
+	autocmd FileType python nnoremap <buffer> <localleader>3 :set makeprg=pylint3\ % <bar> let g:syntastic_python_pylint_exec = '/usr/bin/pylint3'<cr>
+	autocmd FileType python nnoremap <buffer> <localleader>2 :set makeprg=pylint\ % <bar> let g:syntastic_python_pylint_exec = '/usr/bin/pylint'<cr>
 augroup end
 
 if executable('rls')
