@@ -121,7 +121,7 @@ set undoreload=10000
 
 " interface configuration {{{
 set notitle
-set nonumber
+set number
 set nohls
 set cursorline
 set scrolloff=3
@@ -155,7 +155,7 @@ set wildignore+=*.DS_Store                       " OSX bullshit
 set foldmethod=marker
 set foldminlines=0
 set foldenable
-" set foldcolumn=1
+set foldcolumn=3
 " }}}
 
 source ~/.vim/settings/colors.vim
