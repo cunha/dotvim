@@ -14,8 +14,8 @@ nnoremap <leader>x :!./%<cr>
 nnoremap <leader>w :w<cr>
 nnoremap <leader>W :w !sudo tee % &> /dev/null<cr>
 " vnoremap <leader>y "+y
-vmap <leader>y :PowerYankOSC52<cr>
-nmap <leader>y <Plug>(operator-poweryank-osc52)
+vnoremap <leader>y :PowerYankOSC52<cr>
+nnoremap <leader>y <Plug>(operator-poweryank-osc52)
 " nnoremap <leader>ya :%y+<cr>
 noremap <leader>p "+p
 nnoremap <leader>n :NERDTreeToggle<cr>
@@ -51,3 +51,7 @@ nnoremap <silent> <C-a>l :TmuxNavigateRight<cr>
 
 nnoremap <leader>ev :edit ~/.vim/settings/mappings.vim<cr>:edit ~/.vim/settings/file-types.vim<cr>:edit $MYVIMRC<cr>
 nnoremap <leader>sv :source $MYVIMRC<cr>
+
+" map <F10> :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<'
+" \ . synIDattr(synID(line("."),col("."),0),"name") . "> lo<"
+" \ . synIDattr(synIDtrans(synID(line("."),col("."),1)),"name") . ">"<CR>
