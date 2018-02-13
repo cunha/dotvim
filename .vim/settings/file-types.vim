@@ -18,8 +18,13 @@ augroup clang
 augroup end
 
 let g:tex_flavor = "latex"
+let g:tex_no_error = 0
 let g:tex_indent_items = 0
 let g:tex_indent_brace = 0
+let g:vimtex_indent_enabled = 0
+let g:vimtex_indent_ignored_envs = ['figure', 'table', 'document', 'tabular',
+	\ 'itemize', 'enumerate', 'description', 'verbatim', 'comment']
+
 augroup latex
 	autocmd!
 	autocmd FileType tex setlocal noautoindent nosmartindent spell textwidth=68
@@ -56,7 +61,7 @@ augroup pythonlang
 	autocmd FileType python setlocal errorformat=%f:%l:%m makeprg=pylint3\ %
 	autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
 	autocmd FileType python nnoremap <buffer> <localleader>3 :let g:syntastic_python_pylint_exec = '/usr/bin/pylint3'<cr>
-	autocmd FileType python nnoremap <buffer> <localleader>2 :let g:syntastic_python_pylint_exec = '/usr/bin/pylint'<cr>
+	autocmd FileType python nnoremap <buffer> <localleader>2 :let g:syntastic_python_pylint_exec = 'pylint'<cr>
 augroup end
 
 if executable('rls')
