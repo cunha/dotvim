@@ -27,7 +27,7 @@ let g:vimtex_indent_ignored_envs = ['figure', 'table', 'document', 'tabular',
 
 augroup latex
 	autocmd!
-	autocmd FileType tex setlocal noautoindent nosmartindent spell textwidth=68
+	autocmd FileType tex setlocal nocopyindent noautoindent nosmartindent spell textwidth=68
 	autocmd FileType tex nmap <buffer> <localleader>em viWB<ESC>i\emph{<ESC>ea}<ESC>
 	autocmd FileType tex nmap <buffer> <localleader>tt viWB<ESC>i\texttt{<ESC>ea}<ESC>
 	autocmd FileType tex nmap <buffer> <localleader>sc viWB<ESC>i\textsc{<ESC>ea}<ESC>
