@@ -33,15 +33,13 @@ call dein#add('rust-lang/rust.vim')
 " call dein#add('tmhedberg/SimpylFold')
 " call dein#add('mrtazz/simplenote.vim')
 call dein#end()
+source ~/.vim/settings/plugins/latex.vim
 source ~/.vim/settings/plugins/airline.vim
 source ~/.vim/settings/plugins/fugitive.vim
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 0
 let g:syntastic_check_on_open = 0
 let g:syntastic_check_on_wq = 0
-let g:vimtex_view_method = 'zathura'
-" let g:vimtex_view_general_viewer = 'evince'
-let g:vimtex_quickfix_open_on_warning = 0
 let g:yankring_history_dir = '$HOME/.cache/'
 let g:NERDTreeDirArrows = 0
 let g:NERDChristmasTree = 0
