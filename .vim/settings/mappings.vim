@@ -49,7 +49,7 @@ nnoremap <silent> <C-a>l :TmuxNavigateRight<cr>
 "nnoremap <silent> <C-up> :TmuxNavigateUp<cr>
 "nnoremap <silent> <C-right> :TmuxNavigateRight<cr>
 
-nnoremap <leader>ev :edit ~/.vim/settings/mappings.vim<cr>:edit ~/.vim/settings/file-types.vim<cr>:edit $MYVIMRC<cr>
+nnoremap <leader>ev :edit ~/.vim/settings/plugins.vim<cr>:edit ~/.vim/settings/mappings.vim<cr>:edit ~/.vim/settings/file-types.vim<cr>:edit $MYVIMRC<cr>
 nnoremap <leader>sv :source $MYVIMRC<cr>
 
 " map <F10> :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<'

@@ -33,11 +33,14 @@ call dein#add('rust-lang/rust.vim')
 " call dein#add('tmhedberg/SimpylFold')
 " call dein#add('mrtazz/simplenote.vim')
 call dein#end()
-source ~/.vim/settings/plugins/latex.vim
-source ~/.vim/settings/plugins/airline.vim
-source ~/.vim/settings/plugins/fugitive.vim
+
+source ~/.vim/settings/plugins.vim
+
+let g:lsp_async_completion = 1
+let g:lsp_signs_enabled = 1
+let g:lsp_diagnostics_echo_cursor = 1
 let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 0
+let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 0
 let g:syntastic_check_on_wq = 0
 let g:yankring_history_dir = '$HOME/.cache/'
@@ -85,23 +88,25 @@ set updatetime=200  " write swap file after 200 seconds
 " }}}
 
 " editing {{{
-set incsearch
+set wrap
+set breakindent       " indent wrapped lines
+set linebreak         " break on sensible characters (breakat)
 set showmatch
+set incsearch
 set history=1000
 set viminfo='100,f1,:10,/10,n$HOME/.cache/viminfo
 set autoindent
 set nosmartindent
+" set textwidth=0 " so each coauthor can break lines wherever they choose
 set joinspaces
-set breakindent
-set textwidth=0 " so each coauthor
-set wrap        " can break lines
-set linebreak   " wherever they choose
-set formatoptions-=t " do not format text, I do it myself
-set formatoptions+=o " do not continue comments when pushing o/O
-set formatoptions+=1 " do not break before one-letter words
-set formatoptions+=j " remove comment leader when joining lines
-set cpoptions+=J " sentences end with two spaces
-set printoptions=formfeed:y
+set formatoptions=tc  " format according to text-width
+set formatoptions+=q  " allow gq
+set formatoptions+=1  " do not break before one-letter words
+set formatoptions+=j  " remove comment leader when joining lines
+set formatoptions+=n  " format lists
+set formatoptions+=b  " smarter handling of long lines
+set formatlistpat=^\\s*\\d\\+[\\]:.)}]\\s*\\\\|^\\s*[-*]\\s+\\\\|^\\s*(\\a)\\s\\+
+set printoptions=formfeed:y  " use ^L to break pages
 " }}}
 
 " make the status line look good (also, airline) {{{
@@ -118,6 +123,7 @@ set undoreload=10000
 " }}}
 
 " interface configuration {{{
+set noshowmode
 set notitle
 set number
 set nohls
@@ -135,6 +141,7 @@ set timeoutlen=1000
 set ttimeoutlen=0
 set complete=.,w,b,u,t,i " buffers, tags, included files
 set completeopt=menu
+set smartcase
 " }}}
 
 set wildmenu " {{{
