@@ -9,67 +9,46 @@ call dein#add('ConradIrwin/vim-bracketed-paste')
 call dein#add('cunha/vim-colors-solarized')
 call dein#add('christoomey/vim-tmux-navigator')
 call dein#add('haya14busa/vim-poweryank')
-call dein#add('lervag/vimtex')
+call dein#add('machakann/vim-sandwich')
 call dein#add('moll/vim-bbye')
-call dein#add('prabirshrestha/async.vim')
-call dein#add('prabirshrestha/asyncomplete.vim')
-call dein#add('prabirshrestha/asyncomplete-lsp.vim')
-call dein#add('prabirshrestha/vim-lsp')
-call dein#add('scrooloose/nerdcommenter')
 call dein#add('scrooloose/nerdtree')
-call dein#add('scrooloose/syntastic')
 call dein#add('tpope/vim-fugitive')
-call dein#add('tpope/vim-repeat')
-call dein#add('tpope/vim-surround')
 call dein#add('unblevable/quick-scope')
 call dein#add('vim-airline/vim-airline')
 call dein#add('vim-airline/vim-airline-themes')
-call dein#add('vim-scripts/Align')
-call dein#add('vim-scripts/a.vim')
-" Rust:
-call dein#add('Nonius/cargo.vim')
+" Languages:
+call dein#add('lervag/vimtex')
+call dein#add('racer-rust/vim-racer')
 call dein#add('rust-lang/rust.vim')
-" call dein#add('vim-scripts/YankRing.vim')
-" call dein#add('tmhedberg/SimpylFold')
-" call dein#add('mrtazz/simplenote.vim')
+" Others:
+" call dein#add('tpope/vim-repeat')
+" call dein#add('tpope/vim-surround')
+" call dein#add('scrooloose/nerdcommenter')
+" call dein#add('scrooloose/syntastic')
+" Deprecated:
+" call dein#add('vim-scripts/Align')
+" call dein#add('vim-scripts/a.vim')
 call dein#end()
 
 source ~/.vim/settings/plugins.vim
-
-let g:lsp_async_completion = 1
-let g:lsp_signs_enabled = 1
-let g:lsp_diagnostics_echo_cursor = 1
+let g:racer_experimental_completer = 1
+let g:racer_cmd = "/home/cunha/.cargo/bin/racer"
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 0
 let g:syntastic_check_on_wq = 0
 let g:yankring_history_dir = '$HOME/.cache/'
-let g:NERDTreeDirArrows = 0
-let g:NERDChristmasTree = 0
-let g:NERDDefaultAlign = 'left'
-let g:NERDTrimTrailingWhitespace = 1
-let g:NERDSpaceDelims = 1
+
 let g:tmux_navigator_no_mappings = 1
 let g:qs_highlight_on_keys = ['f', 'F', 't', 'T']
-" call dein#add('kien/ctrlp.vim')
-" nmap <C-o> :CtrlP .<cr>
 " call dein#add('Valloric/YouCompleteMe')
-" call dein#add('tpope/vim-obsession')
 " call dein#add('majutsushi/tagbar')
-" call dein#add('myusuf3/numbers.vim')
-" call dein#add('SirVer/ultisnips')
 " call dein#add('junegunn/vim-easy-align')
 " call dein#add('junegunn/vim-easy-align')
-"
-"
-" nmap <leader>tnu :NumbersToggle<CR>
 " }}}
 
 " scripts to check out {{{
-" klen/python-mode
 " gundo
-" snipmate
-" yankring
 " NERDCommenter
 " jedi-vim
 " }}}
@@ -81,10 +60,11 @@ let mapleader = ";"
 let maplocalleader = ","
 
 " file management {{{
+set hidden          " stop asking for :w all the time
 set autowrite       " stop asking for :w all the time
 set nobackup        " do not fill directories with crap
-set updatecount=100 " write swap file after 100 updates
-set updatetime=200  " write swap file after 200 seconds
+set updatecount=10  " write swap file after 10 updates
+set updatetime=180  " write swap file after 180 seconds
 " }}}
 
 " editing {{{
@@ -97,7 +77,6 @@ set history=1000
 set viminfo='100,f1,:10,/10,n$HOME/.cache/viminfo
 set autoindent
 set nosmartindent
-" set textwidth=0 " so each coauthor can break lines wherever they choose
 set joinspaces
 set formatoptions=tc  " format according to text-width
 set formatoptions+=q  " allow gq
@@ -105,7 +84,7 @@ set formatoptions+=1  " do not break before one-letter words
 set formatoptions+=j  " remove comment leader when joining lines
 set formatoptions+=n  " format lists
 set formatoptions+=b  " smarter handling of long lines
-set formatlistpat=^\\s*\\d\\+[\\]:.)}]\\s*\\\\|^\\s*[-*]\\s+\\\\|^\\s*(\\a)\\s\\+
+set formatlistpat=^\\s*\\d\\+[\\]:.)}]\\s\\+\\\\|^\\s*[-*+]\\s\\+\\\\|^\\s*(\\a)\\s\\+
 set printoptions=formfeed:y  " use ^L to break pages
 " }}}
 
@@ -127,11 +106,12 @@ set noshowmode
 set notitle
 set number
 set nohls
+set smartcase
 set cursorline
 set scrolloff=3
 set scroll=5
 set colorcolumn=80
-set t_Co=256
+set t_Co=16
 set list
 set listchars=tab:»\ ,eol:¬,trail:·,extends:<,precedes:>
 set backspace=2
@@ -141,19 +121,18 @@ set timeoutlen=1000
 set ttimeoutlen=0
 set complete=.,w,b,u,t,i " buffers, tags, included files
 set completeopt=menu
-set smartcase
 " }}}
 
 set wildmenu " {{{
 set wildmode=list:longest
-set wildignore+=.hg,.git,.svn                    " Version control
-set wildignore+=*.aux,*.out,*.toc                " LaTeX intermediate files
-set wildignore+=*.jpg,*.bmp,*.gif,*.png,*.jpeg   " binary images
-set wildignore+=*.o,*.obj,*.exe,*.dll,*.manifest " compiled object files
-set wildignore+=*.luac,*.pyc                     " byte code
-set wildignore+=*.spl                            " compiled spelling word lists
-set wildignore+=*.sw?                            " Vim swap files
-set wildignore+=*.DS_Store                       " OSX bullshit
+set wildignore+=.hg,.git,.svn                     " Version control
+set wildignore+=*.aux,*.out,*.toc                 " LaTeX intermediate files
+set wildignore+=*.jpg,*.bmp,*.gif,*.png,*.jpeg    " binary images
+set wildignore+=*.o,*.obj,*.exe,*.dll,*.manifest  " compiled object files
+set wildignore+=*.luac,*.pyc                      " byte code
+set wildignore+=*.spl                             " compiled spelling word lists
+set wildignore+=*.sw?                             " Vim swap files
+set wildignore+=*.DS_Store                        " OSX bullshit
 " }}}
 
 " folding {{{
@@ -176,9 +155,5 @@ set exrc
 function! SetClass()
 	syntax off
 	set nolist
-	set nocursorline
 	set colorcolumn=400
 endfunction
-
-let g:lsp_log_verbose = 1
-let g:lsp_log_file = expand('~/.cache/vim-lsp.log')

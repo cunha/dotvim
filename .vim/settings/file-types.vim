@@ -30,6 +30,7 @@ augroup shellscript
 	autocmd!
 	autocmd FileType sh setlocal tabstop=4 softtabstop=4 shiftwidth=4 expandtab
 	autocmd FileType sh setlocal path+=~/bin/ include=^\\s*\\.
+	autocmd FileType sh setlocal errorformat=%f:%l:%m makeprg=shellcheck\ --format=gcc\ %
 augroup end
 
 let python_highlight_all = 1
@@ -43,21 +44,11 @@ augroup pythonlang
 	autocmd FileType python nnoremap <buffer> <localleader>2 :let g:syntastic_python_pylint_exec = 'pylint'<cr>
 augroup end
 
-if executable('rls')
-	au User lsp_setup call lsp#register_server({
-	\ 'name': 'rls',
-	\ 'cmd': {server_info->['rustup', 'run', 'nightly', 'rls']},
-	\ 'whitelist': ['rust'],
-	\ })
-endif
-
 augroup rustlang
 	autocmd!
 	autocmd FileType rust setlocal tabstop=4 softtabstop=4 shiftwidth=4 expandtab
-	autocmd FileType rust let g:syntastic_rust_checkers = ['cargo', 'rustc']
-	autocmd FileType rust setlocal omnifunc=lsp#complete
+	autocmd FileType rust let g:syntastic_rust_checkers = ['cargo']
 augroup end
-
 
 augroup text
 	autocmd!
@@ -80,16 +71,17 @@ let g:vimtex_view_method = 'zathura'
 let g:vimtex_quickfix_open_on_warning = 0
 
 let g:vimtex_format_enabled = 1
-let g:vimtex_indent_enabled = 1
+let g:vimtex_indent_enabled = 0
 let g:vimtex_indent_bib_enabled = 1
 let g:vimtex_indent_ignored_envs = ['document', 'figure', 'table',
 	\ 'tabular', 'itemize', 'enumerate', 'description', 'verbatim',
 	\ 'comment', 'abstract']
-let g:vimtex_indent_on_ampersands = 0
+
 
 augroup latex
 	autocmd!
-	autocmd FileType tex setlocal nocopyindent noautoindent nosmartindent spell textwidth=68
+	autocmd FileType tex setlocal nocopyindent noautoindent nosmartindent nocindent
+	autocmd FileType tex setlocal spell textwidth=68 expandtab
 	autocmd FileType tex nmap <buffer> <localleader>em viWB<ESC>i\emph{<ESC>ea}<ESC>
 	autocmd FileType tex nmap <buffer> <localleader>tt viWB<ESC>i\texttt{<ESC>ea}<ESC>
 	autocmd FileType tex nmap <buffer> <localleader>sc viWB<ESC>i\textsc{<ESC>ea}<ESC>
