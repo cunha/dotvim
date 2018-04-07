@@ -40,8 +40,8 @@ augroup pythonlang
 	autocmd FileType python setlocal tabstop=4 softtabstop=4 shiftwidth=4 expandtab
 	autocmd FileType python setlocal errorformat=%f:%l:%m makeprg=pylint3\ %
 	autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
-	autocmd FileType python nnoremap <buffer> <localleader>3 :let g:syntastic_python_pylint_exec = '/usr/bin/pylint3'<cr>
-	autocmd FileType python nnoremap <buffer> <localleader>2 :let g:syntastic_python_pylint_exec = 'pylint'<cr>
+	autocmd FileType python nnoremap <buffer> <localleader>3 :set makeprg=pylint3\ %
+	autocmd FileType python nnoremap <buffer> <localleader>2 :set makeprg=pylint\ %
 augroup end
 
 augroup rustlang
