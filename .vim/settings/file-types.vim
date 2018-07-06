@@ -19,10 +19,20 @@ augroup end
 
 augroup html
 	autocmd!
+	autocmd FileType html setlocal tabstop=2 softtabstop=2 shiftwidth=2 expandtab
 	autocmd FileType html vmap <buffer> <localleader>p "vc<lt>p><C-R>v</p><ESC>
 	autocmd FileType html nmap <buffer> <localleader>i viWB<ESC>i<lt>i><ESC>Ea</i><ESC>
 	autocmd FileType html nmap <buffer> <localleader>b viWB<ESC>i<lt>b><ESC>Ea</b><ESC>
 augroup end
+
+augroup htmldjango
+	autocmd!
+	autocmd FileType htmldjango setlocal tabstop=2 softtabstop=2 shiftwidth=2 expandtab
+	autocmd FileType htmldjango vmap <buffer> <localleader>p "vc<lt>p><C-R>v</p><ESC>
+	autocmd FileType htmldjango nmap <buffer> <localleader>i viWB<ESC>i<lt>i><ESC>Ea</i><ESC>
+	autocmd FileType htmldjango nmap <buffer> <localleader>b viWB<ESC>i<lt>b><ESC>Ea</b><ESC>
+augroup end
+
 
 let g:is_posix = 1
 let g:sh_noisk = 1 " please, don't fuck with me
@@ -40,8 +50,8 @@ augroup pythonlang
 	autocmd FileType python setlocal tabstop=4 softtabstop=4 shiftwidth=4 expandtab
 	autocmd FileType python setlocal errorformat=%f:%l:%m makeprg=pylint3\ %
 	autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
-	autocmd FileType python nnoremap <buffer> <localleader>3 :set makeprg=pylint3\ %
-	autocmd FileType python nnoremap <buffer> <localleader>2 :set makeprg=pylint\ %
+	autocmd FileType python nnoremap <buffer> <localleader>3 :set makeprg=python3\ /usr/bin/pylint3\ %
+	autocmd FileType python nnoremap <buffer> <localleader>2 :set makeprg=python\ /usr/bin/pylint\ %
 augroup end
 
 augroup rustlang
