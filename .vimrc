@@ -8,6 +8,7 @@ call dein#add('airblade/vim-gitgutter')
 call dein#add('ConradIrwin/vim-bracketed-paste')
 call dein#add('cunha/vim-colors-solarized')
 call dein#add('christoomey/vim-tmux-navigator')
+call dein#add('kshenoy/vim-signature')
 call dein#add('haya14busa/vim-poweryank')
 call dein#add('machakann/vim-sandwich')
 call dein#add('moll/vim-bbye')
@@ -31,6 +32,7 @@ call dein#add('rust-lang/rust.vim')
 call dein#end()
 
 source ~/.vim/settings/plugins.vim
+let g:NERDTreeMapMenu='M'
 let g:racer_experimental_completer = 1
 let g:racer_cmd = "/home/cunha/.cargo/bin/racer"
 let g:syntastic_always_populate_loc_list = 1
