@@ -2,6 +2,7 @@
 let loaded_netrwPlugin = 1
 
 " NERDTree
+let g:NERDTreeMapMenu='M'
 let g:NERDTreeMinimalUI = 1
 let g:NERDTreeIgnore = ['\~$',
 	\ '\.pyc$', '^__pycache__$']
@@ -32,3 +33,24 @@ let g:airline_extensions = ['quickfix', 'tabline', 'vimtex', 'whitespace',
 let g:airline#extensions#whitespace#mixed_indent_algo = 1
 let g:airline#extensions#wordcount#formatter#default#fmt = '%sw'
 let g:airline#extensions#wordcount#formatter#default#fmt_short = '%sw'
+
+" vim-lsp
+if executable('clangd')
+    augroup lsp_clangd
+        autocmd!
+        " autocmd FileType c setlocal omnifunc=lsp#complete
+        " autocmd FileType cpp setlocal omnifunc=lsp#complete
+        autocmd User lsp_setup call lsp#register_server({
+                    \ 'name': 'clangd',
+                    \ 'cmd': {server_info->['clangd']},
+                    \ 'whitelist': ['c', 'cpp', 'objc', 'objcpp'],
+                    \ })
+    augroup end
+endif
+" if executable('rls')
+"     au User lsp_setup call lsp#register_server({
+"         \ 'name': 'rls',
+"         \ 'cmd': {server_info->['rustup', 'run', 'nightly', 'rls']},
+"         \ 'whitelist': ['rust'],
+"         \ })
+" endif

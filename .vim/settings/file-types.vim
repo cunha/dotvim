@@ -1,73 +1,81 @@
-augroup filetypes
-	autocmd!
-	autocmd BufNewFile,BufRead *plot setlocal filetype=gnuplot
-	autocmd BufNewFile,BufRead *cunha_wp_wordpress* setlocal filetype=markdown
-	autocmd BufNewFile,BufRead mail.google.com* setlocal filetype=mail
-	autocmd BufNewFile,BufRead *mail setlocal filetype=mail
+augroup ftplugin_filetypes
+    autocmd!
+    autocmd BufNewFile,BufRead *plot setlocal filetype=gnuplot
+    autocmd BufNewFile,BufRead *cunha_wp_wordpress* setlocal filetype=markdown
+    autocmd BufNewFile,BufRead mail.google.com* setlocal filetype=mail
+    autocmd BufNewFile,BufRead *mail setlocal filetype=mail
 augroup end
 
-augroup clang
-	autocmd!
-	autocmd FileType c setlocal cindent
-	autocmd FileType c setlocal noexpandtab
-	autocmd FileType c setlocal tabstop=8 softtabstop=8 shiftwidth=8
-	autocmd FileType c imap <buffer> <localleader>logea logea(__FILE__, __LINE__, NULL);
-	autocmd FileType cpp setlocal cindent
-	autocmd FileType cpp setlocal noexpandtab
-	autocmd FileType cpp setlocal tabstop=8 softtabstop=8 shiftwidth=8
+augroup ftplugin_clang
+    autocmd!
+    autocmd FileType c setlocal cindent
+    autocmd FileType c setlocal noexpandtab
+    autocmd FileType c setlocal tabstop=8 softtabstop=8 shiftwidth=8
+    autocmd FileType c imap <buffer> <localleader>logea logea(__FILE__, __LINE__, NULL);
+    autocmd FileType cpp setlocal cindent
+    autocmd FileType cpp setlocal expandtab
+    autocmd FileType cpp setlocal tabstop=4 softtabstop=4 shiftwidth=4
+    " autocmd FileType c setlocal omnifunc=lsp#complete
+    " autocmd FileType cpp setlocal omnifunc=lsp#complete
 augroup end
 
-augroup html
-	autocmd!
-	autocmd FileType html setlocal tabstop=2 softtabstop=2 shiftwidth=2 expandtab
-	autocmd FileType html vmap <buffer> <localleader>p "vc<lt>p><C-R>v</p><ESC>
-	autocmd FileType html nmap <buffer> <localleader>i viWB<ESC>i<lt>i><ESC>Ea</i><ESC>
-	autocmd FileType html nmap <buffer> <localleader>b viWB<ESC>i<lt>b><ESC>Ea</b><ESC>
+augroup ftplugin_html
+    autocmd!
+    autocmd FileType html setlocal tabstop=2 softtabstop=2 shiftwidth=2 expandtab
+    autocmd FileType html vmap <buffer> <localleader>p "vc<lt>p><C-R>v</p><ESC>
+    autocmd FileType html nmap <buffer> <localleader>i viWB<ESC>i<lt>i><ESC>Ea</i><ESC>
+    autocmd FileType html nmap <buffer> <localleader>b viWB<ESC>i<lt>b><ESC>Ea</b><ESC>
 augroup end
 
-augroup htmldjango
-	autocmd!
-	autocmd FileType htmldjango setlocal tabstop=2 softtabstop=2 shiftwidth=2 expandtab
-	autocmd FileType htmldjango vmap <buffer> <localleader>p "vc<lt>p><C-R>v</p><ESC>
-	autocmd FileType htmldjango nmap <buffer> <localleader>i viWB<ESC>i<lt>i><ESC>Ea</i><ESC>
-	autocmd FileType htmldjango nmap <buffer> <localleader>b viWB<ESC>i<lt>b><ESC>Ea</b><ESC>
+augroup ftplugin_htmldjango
+    autocmd!
+    autocmd FileType htmldjango setlocal tabstop=2 softtabstop=2 shiftwidth=2 expandtab
+    autocmd FileType htmldjango vmap <buffer> <localleader>p "vc<lt>p><C-R>v</p><ESC>
+    autocmd FileType htmldjango nmap <buffer> <localleader>i viWB<ESC>i<lt>i><ESC>Ea</i><ESC>
+    autocmd FileType htmldjango nmap <buffer> <localleader>b viWB<ESC>i<lt>b><ESC>Ea</b><ESC>
 augroup end
 
 
 let g:is_posix = 1
 let g:sh_noisk = 1 " please, don't fuck with me
-augroup shellscript
-	autocmd!
-	autocmd FileType sh setlocal tabstop=4 softtabstop=4 shiftwidth=4 expandtab
-	autocmd FileType sh setlocal path+=~/bin/ include=^\\s*\\.
-	autocmd FileType sh setlocal errorformat=%f:%l:%m makeprg=shellcheck\ --format=gcc\ %
+augroup ftplugin_shellscript
+    autocmd!
+    autocmd FileType sh setlocal tabstop=4 softtabstop=4 shiftwidth=4 expandtab
+    autocmd FileType sh setlocal path+=~/bin/ include=^\\s*\\.
+    autocmd FileType sh setlocal errorformat=%f:%l:%m makeprg=shellcheck\ --format=gcc\ %
+augroup end
+
+augroup ftplugin_vim
+    autocmd!
+    autocmd FileType vim setlocal tabstop=4 softtabstop=4 shiftwidth=4 expandtab
 augroup end
 
 let python_highlight_all = 1
 let python_slow_sync = 1
-augroup pythonlang
-	autocmd!
-	autocmd FileType python setlocal tabstop=4 softtabstop=4 shiftwidth=4 expandtab
-	autocmd FileType python setlocal errorformat=%f:%l:%m makeprg=pylint3\ %
-	autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
-	autocmd FileType python nnoremap <buffer> <localleader>3 :set makeprg=python3\ /usr/bin/pylint3\ %
-	autocmd FileType python nnoremap <buffer> <localleader>2 :set makeprg=python\ /usr/bin/pylint\ %
+augroup ftplugin_pythonlang
+    autocmd!
+    autocmd FileType python setlocal tabstop=4 softtabstop=4 shiftwidth=4 expandtab
+    autocmd FileType python setlocal errorformat=%f:%l:%m makeprg=pylint3\ %
+    autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
+    autocmd FileType python nnoremap <buffer> <localleader>3 :set makeprg=python3\ /usr/bin/pylint3\ %
+    autocmd FileType python nnoremap <buffer> <localleader>2 :set makeprg=python\ /usr/bin/pylint\ %
 augroup end
 
-augroup rustlang
-	autocmd!
-	autocmd FileType rust setlocal tabstop=4 softtabstop=4 shiftwidth=4 expandtab
-	autocmd FileType rust let g:syntastic_rust_checkers = ['cargo']
+augroup ftplugin_rustlang
+    autocmd!
+    autocmd FileType rust setlocal tabstop=4 softtabstop=4 shiftwidth=4 expandtab
+    autocmd FileType rust let g:syntastic_rust_checkers = ['cargo']
+    " autocmd FileType rust setlocal omnifunc=lsp#complete
 augroup end
 
-augroup text
-	autocmd!
-	autocmd FileType mail setlocal textwidth=68 spell foldmethod=expr
-	autocmd FileType mail setlocal foldexpr=strlen(substitute(substitute(getline(v:lnum),'\\s','',\"g\"),'[^>].*','',''))
-	autocmd FileType text setlocal textwidth=68 spell
-	autocmd FileType markdown setlocal textwidth=68 tabstop=4 softtabstop=4 shiftwidth=4 expandtab spell
-	autocmd FileType gitcommit setlocal textwidth=68
-	autocmd FileType xml,yaml,json setlocal tabstop=2 softtabstop=2 shiftwidth=2 expandtab
+augroup ftplugin_text
+    autocmd!
+    autocmd FileType mail setlocal textwidth=68 spell foldmethod=expr
+    autocmd FileType mail setlocal foldexpr=strlen(substitute(substitute(getline(v:lnum),'\\s','',\"g\"),'[^>].*','',''))
+    autocmd FileType text setlocal textwidth=68 spell
+    autocmd FileType markdown setlocal textwidth=68 tabstop=4 softtabstop=4 shiftwidth=4 expandtab spell
+    autocmd FileType gitcommit setlocal textwidth=68
+    autocmd FileType xml,yaml,json setlocal tabstop=2 softtabstop=2 shiftwidth=2 expandtab
 augroup end
 
 
@@ -84,22 +92,21 @@ let g:vimtex_format_enabled = 1
 let g:vimtex_indent_enabled = 0
 let g:vimtex_indent_bib_enabled = 1
 let g:vimtex_indent_ignored_envs = ['document', 'figure', 'table',
-	\ 'tabular', 'itemize', 'enumerate', 'description', 'verbatim',
-	\ 'comment', 'abstract']
+    \ 'tabular', 'itemize', 'enumerate', 'description', 'verbatim',
+    \ 'comment', 'abstract']
 
-
-augroup latex
-	autocmd!
-	autocmd FileType tex setlocal nocopyindent noautoindent nosmartindent nocindent
-	autocmd FileType tex setlocal spell textwidth=68 expandtab
-	autocmd FileType tex nmap <buffer> <localleader>em viWB<ESC>i\emph{<ESC>ea}<ESC>
-	autocmd FileType tex nmap <buffer> <localleader>tt viWB<ESC>i\texttt{<ESC>ea}<ESC>
-	autocmd FileType tex nmap <buffer> <localleader>sc viWB<ESC>i\textsc{<ESC>ea}<ESC>
-	autocmd FileType tex nmap <buffer> <localleader>bf viWB<ESC>i\textbf{<ESC>ea}<ESC>
-	autocmd FileType tex nmap <buffer> <localleader>sf viWB<ESC>i\textsf{<ESC>ea}<ESC>
-	autocmd FileType tex nmap <buffer> <localleader>ve viWB<ESC>i\verb+<ESC>ea+<ESC>
-	autocmd FileType tex nmap <buffer> <localleader>ssf viWB<ESC>i\ssf{<ESC>mlvE:s/\%V_/\\_/g<RETURN>`lEa}<ESC>
-	" autocmd FileType tex nmap <leader>q gwap:wa<RETURN>:make<RETURN>
+augroup ftplugin_latex
+    autocmd!
+    autocmd FileType tex setlocal nocopyindent noautoindent nosmartindent nocindent
+    autocmd FileType tex setlocal spell textwidth=68 expandtab
+    autocmd FileType tex nmap <buffer> <localleader>em viWB<ESC>i\emph{<ESC>ea}<ESC>
+    autocmd FileType tex nmap <buffer> <localleader>tt viWB<ESC>i\texttt{<ESC>ea}<ESC>
+    autocmd FileType tex nmap <buffer> <localleader>sc viWB<ESC>i\textsc{<ESC>ea}<ESC>
+    autocmd FileType tex nmap <buffer> <localleader>bf viWB<ESC>i\textbf{<ESC>ea}<ESC>
+    autocmd FileType tex nmap <buffer> <localleader>sf viWB<ESC>i\textsf{<ESC>ea}<ESC>
+    autocmd FileType tex nmap <buffer> <localleader>ve viWB<ESC>i\verb+<ESC>ea+<ESC>
+    autocmd FileType tex nmap <buffer> <localleader>ssf viWB<ESC>i\ssf{<ESC>mlvE:s/\%V_/\\_/g<RETURN>`lEa}<ESC>
+    " autocmd FileType tex nmap <leader>q gwap:wa<RETURN>:make<RETURN>
 augroup end
 
 

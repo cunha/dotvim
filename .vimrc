@@ -9,9 +9,12 @@ call dein#add('ConradIrwin/vim-bracketed-paste')
 call dein#add('cunha/vim-colors-solarized')
 call dein#add('christoomey/vim-tmux-navigator')
 call dein#add('kshenoy/vim-signature')
+" call dein#add('hukeyue/vim-clangd')
 call dein#add('haya14busa/vim-poweryank')
 call dein#add('machakann/vim-sandwich')
 call dein#add('moll/vim-bbye')
+" call dein#add('prabirshrestha/async.vim')
+" call dein#add('prabirshrestha/vim-lsp')
 call dein#add('scrooloose/nerdtree')
 call dein#add('tpope/vim-fugitive')
 call dein#add('unblevable/quick-scope')
@@ -21,6 +24,8 @@ call dein#add('vim-airline/vim-airline-themes')
 call dein#add('lervag/vimtex')
 call dein#add('racer-rust/vim-racer')
 call dein#add('rust-lang/rust.vim')
+" call dein#add('octol/vim-cpp-enhanced-highlight')
+
 " Others:
 " call dein#add('tpope/vim-repeat')
 " call dein#add('tpope/vim-surround')
@@ -31,18 +36,28 @@ call dein#add('rust-lang/rust.vim')
 " call dein#add('vim-scripts/a.vim')
 call dein#end()
 
-source ~/.vim/settings/plugins.vim
-let g:NERDTreeMapMenu='M'
-let g:racer_experimental_completer = 1
-let g:racer_cmd = "/home/cunha/.cargo/bin/racer"
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 0
-let g:syntastic_check_on_wq = 0
-let g:yankring_history_dir = '$HOME/.cache/'
+" let g:lsp_signs_enabled = 1
+" let g:lsp_diagnostics_echo_cursor = 1
+" let g:lsp_signs_error = {'text': '✗'}
+" let g:lsp_signs_warning = {'text': '‼', 'icon': '/path/to/some/icon'} " icons require GUI
+" let g:lsp_signs_hint = {'icon': '/path/to/some/other/icon'} " icons require GUI
+" let g:lsp_log_verbose = 1
+" let g:lsp_log_file = expand('~/vim-lsp.log')
 
+
+
+source ~/.vim/settings/plugins.vim
 let g:tmux_navigator_no_mappings = 1
 let g:qs_highlight_on_keys = ['f', 'F', 't', 'T']
+
+" let g:racer_experimental_completer = 1
+" let g:racer_cmd = "/home/cunha/.cargo/bin/racer"
+" let g:syntastic_always_populate_loc_list = 1
+" let g:syntastic_auto_loc_list = 1
+" let g:syntastic_check_on_open = 0
+" let g:syntastic_check_on_wq = 0
+" let g:yankring_history_dir = '$HOME/.cache/'
+
 " call dein#add('Valloric/YouCompleteMe')
 " call dein#add('majutsushi/tagbar')
 " call dein#add('junegunn/vim-easy-align')
@@ -122,7 +137,7 @@ set ttymouse=xterm
 set timeoutlen=1000
 set ttimeoutlen=0
 set complete=.,w,b,u,t,i " buffers, tags, included files
-set completeopt=menu
+set completeopt+=longest
 " }}}
 
 set wildmenu " {{{
