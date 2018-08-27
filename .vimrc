@@ -165,6 +165,7 @@ source ~/.vim/settings/file-types.vim
 source ~/.vim/settings/mappings.vim
 
 autocmd VimLeave * call system("xsel -ib", getreg('+'))
+autocmd CompleteDone * pclose
 
 set secure
 set exrc

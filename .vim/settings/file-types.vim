@@ -109,6 +109,20 @@ augroup ftplugin_latex
     " autocmd FileType tex nmap <leader>q gwap:wa<RETURN>:make<RETURN>
 augroup end
 
+augroup ftplugin_java
+    autocmd!
+    autocmd FileType java setlocal tabstop=4 softtabstop=4 shiftwidth=4
+    autocmd FileType java setlocal nowrap
+    autocmd FileType java inoremap <buffer> <c-@> <c-x><c-u>
+    autocmd FileType java nnoremap <buffer> <localleader>r :JavaRename 
+    autocmd FileType java nnoremap <buffer> <localleader>i :JavaImportOrganize<cr>
+    autocmd FileType java nnoremap <buffer> <localleader>f :%JavaFormat<cr>
+    autocmd FileType java nnoremap <buffer> <localleader>c :JavaCorrect<cr>
+    autocmd FileType java nnoremap <buffer> <localleader>n :JavaNew<cr>
+    autocmd FileType java nnoremap <buffer> <localleader>d :JavaDocSearch -x declarations<cr>
+augroup end
+
+
 
 autocmd User fugitive
   \ if fugitive#buffer().type() =~# '^\%(tree\|blob\)$' |
