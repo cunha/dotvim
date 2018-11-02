@@ -29,6 +29,8 @@ noremap <leader>soff :setlocal nospell<cr>
 
 nnoremap <leader>date "=strftime("%Y%m%d.%H%M")<cr>P
 inoremap <leader>date <C-R>=strftime("%Y%m%d.%H%M")<cr>
+nnoremap <leader>sdate "=strftime("%Y-%m-%d")<cr>P
+inoremap <leader>sdate <C-R>=strftime("%Y-%m-%d")<cr>
 
 nnoremap <silent> <C-a>h :TmuxNavigateLeft<cr>
 nnoremap <silent> <C-a>j :TmuxNavigateDown<cr>

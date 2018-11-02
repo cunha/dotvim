@@ -73,8 +73,8 @@ augroup ftplugin_text
     autocmd FileType mail setlocal textwidth=68 spell foldmethod=expr
     autocmd FileType mail setlocal foldexpr=strlen(substitute(substitute(getline(v:lnum),'\\s','',\"g\"),'[^>].*','',''))
     autocmd FileType text setlocal textwidth=68 spell
-    autocmd FileType markdown setlocal textwidth=68 tabstop=4 softtabstop=4 shiftwidth=4 expandtab spell
     autocmd FileType gitcommit setlocal textwidth=68
+    autocmd FileType markdown setlocal textwidth=68 tabstop=2 softtabstop=2 shiftwidth=2 expandtab spell
     autocmd FileType xml,yaml,json setlocal tabstop=2 softtabstop=2 shiftwidth=2 expandtab
 augroup end
 
@@ -88,10 +88,10 @@ let g:vimtex_view_method = 'zathura'
 " let g:vimtex_view_general_viewer = 'evince'
 let g:vimtex_quickfix_open_on_warning = 0
 
-let g:vimtex_format_enabled = 1
+let g:vimtex_format_enabled = 0
 let g:vimtex_indent_enabled = 0
 let g:vimtex_indent_bib_enabled = 1
-let g:vimtex_indent_ignored_envs = ['document', 'figure', 'table',
+let g:vimtex_indent_ignored_envs = ['abstract', 'document', 'figure', 'table',
     \ 'tabular', 'itemize', 'enumerate', 'description', 'verbatim',
     \ 'comment', 'abstract']
 

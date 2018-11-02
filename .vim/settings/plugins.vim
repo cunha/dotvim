@@ -1,5 +1,5 @@
 " Disable Netrw
-let loaded_netrwPlugin = 1
+" let loaded_netrwPlugin = 1
 
 " NERDTree
 let g:NERDTreeMapMenu='M'
