@@ -17,13 +17,15 @@ call dein#add('moll/vim-bbye')
 " call dein#add('prabirshrestha/vim-lsp')
 call dein#add('scrooloose/nerdtree')
 call dein#add('tpope/vim-fugitive')
+call dein#add('tpope/vim-commentary')
 call dein#add('unblevable/quick-scope')
+call dein#add('Valloric/YouCompleteMe')
 call dein#add('vim-airline/vim-airline')
 call dein#add('vim-airline/vim-airline-themes')
 " Languages:
 call dein#add('lervag/vimtex')
-call dein#add('racer-rust/vim-racer')
-call dein#add('rust-lang/rust.vim')
+" call dein#add('racer-rust/vim-racer')
+" call dein#add('rust-lang/rust.vim')
 " call dein#add('octol/vim-cpp-enhanced-highlight')
 
 " Others:
