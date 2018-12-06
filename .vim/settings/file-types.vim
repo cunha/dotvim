@@ -55,10 +55,10 @@ let python_slow_sync = 1
 augroup ftplugin_pythonlang
     autocmd!
     autocmd FileType python setlocal tabstop=4 softtabstop=4 shiftwidth=4 expandtab
-    autocmd FileType python setlocal errorformat=%f:%l:%m makeprg=pylint3\ %
-    autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
-    autocmd FileType python nnoremap <buffer> <localleader>3 :set makeprg=python3\ /usr/bin/pylint3\ %
-    autocmd FileType python nnoremap <buffer> <localleader>2 :set makeprg=python\ /usr/bin/pylint\ %
+    autocmd FileType python setlocal errorformat=%f:%l:%m makeprg=python3\ -m\ pylint\ %
+    " autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
+    autocmd FileType python nnoremap <buffer> <localleader>3 :set makeprg=python3\ -m\ pylint\ %
+    autocmd FileType python nnoremap <buffer> <localleader>2 :set makeprg=python2\ -m\ pylint\ %
 augroup end
 
 augroup ftplugin_rustlang
