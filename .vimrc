@@ -22,6 +22,7 @@ call dein#add('unblevable/quick-scope')
 call dein#add('Valloric/YouCompleteMe')
 call dein#add('vim-airline/vim-airline')
 call dein#add('vim-airline/vim-airline-themes')
+call dein#add('vim-scripts/a.vim')
 " Languages:
 call dein#add('lervag/vimtex')
 " call dein#add('racer-rust/vim-racer')
@@ -35,7 +36,6 @@ call dein#add('lervag/vimtex')
 " call dein#add('scrooloose/syntastic')
 " Deprecated:
 " call dein#add('vim-scripts/Align')
-" call dein#add('vim-scripts/a.vim')
 call dein#end()
 
 " let g:lsp_signs_enabled = 1

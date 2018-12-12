@@ -9,6 +9,7 @@ vnoremap k gk
 nnoremap <leader>ed :FZF %:h<cr>
 nnoremap <leader>eh :FZF ~/<cr>
 nnoremap <leader>n :NERDTreeToggle<cr>
+nnoremap <leader>f :NERDTreeToggle<cr>
 
 nnoremap <leader>x :!./%<cr>
 nnoremap <leader>w :w<cr>
