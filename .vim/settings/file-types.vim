@@ -14,7 +14,7 @@ augroup ftplugin_clang
     autocmd FileType c imap <buffer> <localleader>logea logea(__FILE__, __LINE__, NULL);
     autocmd FileType cpp setlocal cindent
     autocmd FileType cpp setlocal expandtab
-    autocmd FileType cpp setlocal tabstop=4 softtabstop=4 shiftwidth=4
+    autocmd FileType cpp setlocal tabstop=2 softtabstop=2 shiftwidth=2
     " autocmd FileType c setlocal omnifunc=lsp#complete
     " autocmd FileType cpp setlocal omnifunc=lsp#complete
 augroup end
