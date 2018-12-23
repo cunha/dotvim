@@ -95,6 +95,8 @@ let g:vimtex_indent_ignored_envs = ['abstract', 'document', 'figure', 'table',
     \ 'tabular', 'itemize', 'enumerate', 'description', 'verbatim',
     \ 'comment', 'abstract']
 
+let g:vimtex_toc_config = {'layer_status': { 'content': 1, 'label': 0, 'todo': 0, 'include': 0 }}
+
 augroup ftplugin_latex
     autocmd!
     autocmd FileType tex setlocal nocopyindent noautoindent nosmartindent nocindent
@@ -106,6 +108,7 @@ augroup ftplugin_latex
     autocmd FileType tex nmap <buffer> <localleader>sf viWB<ESC>i\textsf{<ESC>ea}<ESC>
     autocmd FileType tex nmap <buffer> <localleader>ve viWB<ESC>i\verb+<ESC>ea+<ESC>
     autocmd FileType tex nmap <buffer> <localleader>ssf viWB<ESC>i\ssf{<ESC>mlvE:s/\%V_/\\_/g<RETURN>`lEa}<ESC>
+    " autocmd FileType tex let g:vimtex_toc_config['layers'] = [ 'content' ]
     " autocmd FileType tex nmap <leader>q gwap:wa<RETURN>:make<RETURN>
 augroup end
 
