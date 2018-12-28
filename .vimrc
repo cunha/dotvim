@@ -22,20 +22,19 @@ call dein#add('unblevable/quick-scope')
 call dein#add('vim-airline/vim-airline')
 call dein#add('vim-airline/vim-airline-themes')
 call dein#add('vim-scripts/a.vim')
+" File types
+call dein#add('godlygeek/tabular')
+call dein#add('plasticboy/vim-markdown')
 " Languages:
 call dein#add('lervag/vimtex')
 call dein#add('Valloric/YouCompleteMe')
 " call dein#add('racer-rust/vim-racer')
 " call dein#add('rust-lang/rust.vim')
 " call dein#add('octol/vim-cpp-enhanced-highlight')
-
 " Others:
 " call dein#add('tpope/vim-repeat')
 " call dein#add('tpope/vim-surround')
-" call dein#add('scrooloose/nerdcommenter')
 " call dein#add('scrooloose/syntastic')
-" Deprecated:
-" call dein#add('vim-scripts/Align')
 call dein#end()
 
 " let g:lsp_signs_enabled = 1
