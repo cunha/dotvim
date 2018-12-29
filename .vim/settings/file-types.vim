@@ -74,10 +74,16 @@ augroup ftplugin_text
     autocmd FileType mail setlocal foldexpr=strlen(substitute(substitute(getline(v:lnum),'\\s','',\"g\"),'[^>].*','',''))
     autocmd FileType text setlocal textwidth=68 spell
     autocmd FileType gitcommit setlocal textwidth=68
-    autocmd FileType markdown setlocal textwidth=68 tabstop=2 softtabstop=2 shiftwidth=2 expandtab spell
+    " autocmd FileType markdown setlocal textwidth=68 tabstop=2 softtabstop=2 shiftwidth=2 expandtab spell
+    autocmd FileType markdown setlocal textwidth=72 tabstop=2 softtabstop=2 shiftwidth=2 expandtab spell
+    autocmd FileType markdown setlocal comments=fb:>,fb:*,fb:+,fb:-
     autocmd FileType xml,yaml,json setlocal tabstop=2 softtabstop=2 shiftwidth=2 expandtab
 augroup end
 
+let g:vim_markdown_new_list_item_indent = 2
+let g:vim_markdown_no_extensions_in_markdown = 1
+let g:vim_markdown_follow_anchor = 1
+let g:vim_markdown_anchorexpr = "'{#'.v:anchor.'}'"
 
 let g:tex_flavor = "latex"
 let g:tex_no_error = 0
