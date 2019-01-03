@@ -28,6 +28,7 @@ call dein#add('plasticboy/vim-markdown')
 " Languages:
 call dein#add('lervag/vimtex')
 call dein#add('Valloric/YouCompleteMe')
+call dein#add('rhysd/vim-clang-format')
 " call dein#add('racer-rust/vim-racer')
 " call dein#add('rust-lang/rust.vim')
 " call dein#add('octol/vim-cpp-enhanced-highlight')
