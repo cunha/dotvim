@@ -34,6 +34,12 @@ let g:airline#extensions#whitespace#mixed_indent_algo = 1
 let g:airline#extensions#wordcount#formatter#default#fmt = '%sw'
 let g:airline#extensions#wordcount#formatter#default#fmt_short = '%sw'
 
+let g:black_fast = 0
+let g:black_linelength = 79
+let g:black_skip_string_normalization = 0
+let g:black_virtualenv = '~/.vim/black'
+autocmd BufWritePre *.py execute ':Black'
+
 " vim-lsp
 if executable('clangd')
     augroup lsp_clangd

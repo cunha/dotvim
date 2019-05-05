@@ -22,6 +22,7 @@ call dein#add('vim-airline/vim-airline-themes')
 " call dein#add('godlygeek/tabular')
 " call dein#add('plasticboy/vim-markdown')
 " Languages:
+" call dein#add('ambv/black')
 " call dein#add('prabirshrestha/async.vim')
 " call dein#add('prabirshrestha/vim-lsp')
 " call dein#add('fatih/vim-go')
