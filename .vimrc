@@ -33,6 +33,15 @@ call dein#add('vim-airline/vim-airline-themes')
 " call dein#add('racer-rust/vim-racer')
 " call dein#add('rust-lang/rust.vim')
 " call dein#add('octol/vim-cpp-enhanced-highlight')
+" call dein#add('prabirshrestha/async.vim')
+" call dein#add('prabirshrestha/vim-lsp')
+" Clojure:
+" call dein#add('luochen1990/rainbow')
+" call dein#add('gberenfield/cljfold.vim')
+" call dein#add('tpope/vim-fireplace')
+" call dein#add('guns/vim-sexp')
+" Python:
+" call dein#add('ambv/black')
 " Others:
 " call dein#add('tpope/vim-repeat')
 " call dein#add('tpope/vim-surround')

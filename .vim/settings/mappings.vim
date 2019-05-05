@@ -33,14 +33,25 @@ inoremap <leader>date <C-R>=strftime("%Y%m%d.%H%M")<cr>
 nnoremap <leader>sdate "=strftime("%Y-%m-%d")<cr>P
 inoremap <leader>sdate <C-R>=strftime("%Y-%m-%d")<cr>
 
+inoremap <C-h> <C-w>
+inoremap <C-w> <nop>
+inoremap <A-Del> <C-O>dW
+inoremap <C-\> <C-O>b
+inoremap <Esc>\ <C-O>B
 
 if &term =~ "rxvt"
+    inoremap [3^ <C-O>dw
+    inoremap [33~ <C-O>dB
     set <S-F11>=[23$
     set <S-F12>=[24$
 elseif &term =~ "tmux"
+    inoremap [3;5~ <C-O>dw
+    inoremap [18;2~ <C-O>dB
     set <S-F11>=[23;2~
     set <S-F12>=[24;2~
 elseif &term =~ "xterm"
+    inoremap [3;5~ <C-O>dw
+    inoremap  <C-O>dB
     set <S-F11>=[23;2~
     set <S-F12>=[24;2~
 endif

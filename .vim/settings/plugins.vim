@@ -60,3 +60,23 @@ endif
 "         \ 'whitelist': ['rust'],
 "         \ })
 " endif
+
+" clojure rainbow parens
+let g:rainbow_active = 1
+let g:rainbow_conf = {
+      \  'guifgs': ['royalblue3', 'darkorange3', 'seagreen3', 'firebrick'],
+      \  'ctermfgs': ['lightblue', 'lightyellow', 'lightcyan', 'lightmagenta'],
+      \  'parentheses': ['start=/(/ end=/)/ fold', 'start=/\[/ end=/\]/ fold', 'start=/{/ end=/}/ fold'],
+      \  'separately': {
+      \      '*': 0,
+      \      'clojure': {},
+      \  }
+      \}
+
+" configure clojure folding
+let g:clojure_foldwords = "def,defn,defmacro,defmethod,defschema,defprotocol,defrecord"
+
+" evaluate top level form
+" au BufEnter *.clj nnoremap <buffer> cpt :Eval<CR>
+" show last evaluation in temp file
+" au BufEnter *.clj nnoremap <buffer> cpl :Last<CR>
