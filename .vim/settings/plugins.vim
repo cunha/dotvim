@@ -38,7 +38,7 @@ let g:black_fast = 0
 let g:black_linelength = 79
 let g:black_skip_string_normalization = 0
 let g:black_virtualenv = '~/.vim/black'
-autocmd BufWritePre *.py execute ':Black'
+" autocmd BufWritePre *.py execute ':Black'
 
 " vim-lsp
 if executable('clangd')
