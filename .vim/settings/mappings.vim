@@ -6,6 +6,7 @@ vnoremap j gj
 nnoremap k gk
 vnoremap k gk
 
+nnoremap <leader>ee :FZF<cr>
 nnoremap <leader>ed :FZF %:h<cr>
 nnoremap <leader>eh :FZF ~/<cr>
 nnoremap <leader>n :NERDTreeToggle<cr>
