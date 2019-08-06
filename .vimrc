@@ -18,23 +18,25 @@ call dein#add('tpope/vim-commentary')
 call dein#add('unblevable/quick-scope')
 call dein#add('vim-airline/vim-airline')
 call dein#add('vim-airline/vim-airline-themes')
-" File types
 " call dein#add('godlygeek/tabular')
 " call dein#add('plasticboy/vim-markdown')
-" Languages:
-" call dein#add('ambv/black')
 " call dein#add('prabirshrestha/async.vim')
 " call dein#add('prabirshrestha/vim-lsp')
+" call dein#add('scrooloose/syntastic')
+" call dein#add('tpope/vim-repeat')
+" call dein#add('tpope/vim-surround')
+" Go:
 " call dein#add('fatih/vim-go')
+" LaTeX:
 " call dein#add('lervag/vimtex')
+" C:
+" call dein#add('vim-scripts/a.vim')
 " call dein#add('rhysd/vim-clang-format')
 " call dein#add('Valloric/YouCompleteMe')
-" call dein#add('vim-scripts/a.vim')
+" call dein#add('octol/vim-cpp-enhanced-highlight')
+" Rust:
 " call dein#add('racer-rust/vim-racer')
 " call dein#add('rust-lang/rust.vim')
-" call dein#add('octol/vim-cpp-enhanced-highlight')
-" call dein#add('prabirshrestha/async.vim')
-" call dein#add('prabirshrestha/vim-lsp')
 " Clojure:
 " call dein#add('luochen1990/rainbow')
 " call dein#add('gberenfield/cljfold.vim')
@@ -42,10 +44,6 @@ call dein#add('vim-airline/vim-airline-themes')
 " call dein#add('guns/vim-sexp')
 " Python:
 " call dein#add('ambv/black')
-" Others:
-" call dein#add('tpope/vim-repeat')
-" call dein#add('tpope/vim-surround')
-" call dein#add('scrooloose/syntastic')
 call dein#end()
 
 " let g:lsp_signs_enabled = 1
