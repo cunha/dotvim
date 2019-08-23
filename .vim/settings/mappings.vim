@@ -46,13 +46,30 @@ if &term =~ "rxvt"
     set <S-F11>=[23$
     set <S-F12>=[24$
 elseif &term =~ "tmux"
-    inoremap [3;5~ <C-O>dw
-    inoremap [18;2~ <C-O>dB
+    " Tmux on kitty is just like xterm
+    inoremap [3;3~ <C-O>dw
+    inoremap [3;5~ <C-O>dW
+    inoremap  <C-O>db<C-O>x
+    inoremap  <C-O>dB<C-O>x
+    inoremap [1;5D <C-O>B
+    inoremap [1;3D <C-O>b
+    inoremap [1;5C <C-O>W
+    inoremap [1;3C <C-O>w
+    " Tmux on urxvt:
+    " inoremap [3;5~ <C-O>dw
+    " inoremap [18;2~ <C-O>db
+    inoremap  <C-O>dB<C-O>x
     set <S-F11>=[23;2~
     set <S-F12>=[24;2~
 elseif &term =~ "xterm"
-    inoremap [3;5~ <C-O>dw
-    inoremap  <C-O>dB
+    inoremap [3;3~ <C-O>dw
+    inoremap [3;5~ <C-O>dW
+    inoremap  <C-O>db<C-O>x
+    inoremap  <C-O>dB<C-O>x
+    inoremap [1;5D <C-O>B
+    inoremap [1;3D <C-O>b
+    inoremap [1;5C <C-O>W
+    inoremap [1;3C <C-O>w
     set <S-F11>=[23;2~
     set <S-F12>=[24;2~
 endif
