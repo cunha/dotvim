@@ -39,6 +39,11 @@ inoremap <C-w> <nop>
 inoremap <A-Del> <C-O>dW
 inoremap <C-\> <C-O>b
 inoremap <Esc>\ <C-O>B
+" inoremap <Esc>h <Left>
+" inoremap <Esc>k <Up>
+" inoremap <Esc>j <Down>
+" inoremap <Esc>l <Right>
+
 
 if &term =~ "rxvt"
     inoremap [3^ <C-O>dw
@@ -77,8 +82,8 @@ endif
 nnoremap <silent> <S-F11> :TmuxNavigateLeft<cr>
 nnoremap <silent> <S-F12> :TmuxNavigateRight<cr>
 " nnoremap <silent> <C-a>h :TmuxNavigateLeft<cr>
-" nnoremap <silent> <C-a>j :TmuxNavigateDown<cr>
-" nnoremap <silent> <C-a>k :TmuxNavigateUp<cr>
+nnoremap <silent> <C-a>j :TmuxNavigateDown<cr>
+nnoremap <silent> <C-a>k :TmuxNavigateUp<cr>
 " nnoremap <silent> <C-a>l :TmuxNavigateRight<cr>
 
 nnoremap <leader>ev :edit ~/.vim/settings/plugins.vim<cr>:edit ~/.vim/settings/mappings.vim<cr>:edit ~/.vim/settings/file-types.vim<cr>:edit $MYVIMRC<cr>
